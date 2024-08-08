@@ -1,151 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON Data Interpretation</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ShadowBase DB</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+    <link href="./css/Styles.css" rel="stylesheet"/>
     <style>
-        body {
-            background-color: #f8f9fa;
+        .news-article {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        .container {
-            margin-top: 50px;
+
+        .grayscale {
+            filter: grayscale(100%);
         }
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 30px;
+
+        .imagenesPost {
+            width: 250px;
+            height: 250px;
         }
-        table {
-            margin-bottom: 50px;
+
+        @media (max-width: 768px) {
+            .twitterhide {
+                display: none;
+            }
         }
-        th {
-            background-color: #343a40;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-        }
+
     </style>
 </head>
-<body>
-<div class="container">
-    <h1>Character and Skill Data</h1>
+<body class="font-sans bg-graybg">
+<header class="bg-dark shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-claire text-white">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold text-white" href="#">ShadowBase DB</a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./index.html">
+                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_01_Off.png" width="26"/>
+                            Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./characters.html">
+                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_02_Off.png" width="32"/>Characters
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./banners.html">
+                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_06_Off.png" width="32"/>Banners
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./events.html">
+                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_06_Off.png" width="32"/>Events
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 main-content mt-5">
+            <div class="p-3 mb-4 rounded-2 bg-alpha shadow-lg">
+                <h3>Server time</h3>
+                <p>Fecha y hora de servidor
+                <p id="server-time"></p>
+                <p>Tiempo hasta el reset
+                <p id="reset-countdown"></p>
+                </p></p></div>
+            <div class="news-article shadow-lg">
+                <div>
+                    <h3>Upcoming Events</h3>
+                    <div class="d-flex flex-column align-items-center" data-importance="2">
+                        <a href="Events/40016.html">
+                            <img class="w-100 grayscale-on-finish" src="img/Eventos/Armaggedon14.png"/>
+                        </a>
+                        <h5>15/02/2024 - 18/02/2024</h5>
+                        <div id="#"></div>
 
-    <h2>Characters</h2>
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered" id="characters-table">
-            <thead>
-            <tr id="characters-header"></tr>
-            </thead>
-            <tbody id="characters-body"></tbody>
-        </table>
-    </div>
-
-    <h2>Skills with +</h2>
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered" id="skills-plus-table">
-            <thead>
-            <tr id="skills-plus-header"></tr>
-            </thead>
-            <tbody id="skills-plus-body"></tbody>
-        </table>
-    </div>
-
-    <h2>Skills without +</h2>
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered" id="skills-minus-table">
-            <thead>
-            <tr id="skills-minus-header"></tr>
-            </thead>
-            <tbody id="skills-minus-body"></tbody>
-        </table>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative twitterhide">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <div aria-label="Cambiar idioma" class="btn-group w-100" role="group">
+                            <button class="btn btn-dark flex-fill" onclick="jptwitter()" type="button">JP</button>
+                            <button class="btn btn-dark flex-fill" onclick="engtwitter()" type="button">ENG</button>
+                        </div>
+                    </div>
+                    <div id="jp">
+                        <a class="twitter-timeline" data-height="600"
+                           href="https://twitter.com/ShadowgardenMoG?ref_src=twsrc%5Etfw">Tweets by ShadowgardenMoG</a>
+                        <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+                    </div>
+                    <div id="eng" style="display: none">
+                        <a class="twitter-timeline" data-height="600"
+                           href="https://twitter.com/emishadow_rpg?ref_src=twsrc%5Etfw">Tweets by emishadow_rpg</a>
+                        <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col main-content mt-5">
+            <div class="news-article shadow-lg">
+                <h3>Título de la noticia 2</h3>
+                <p>Contenido de la noticia 2.</p>
+            </div>
+            <div class="shadow-lg">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">Rose: Moonlit Path</h3>
+                        <h6 class="mb-0">«This is something I've been entrusted with!»</h6>
+                        <div class="mb-1 text-muted">Dic 15</div>
+                        <p class="card-text mb-auto">¡Rose: Moonlit Path ya disponible!</p>
+                        <a class="stretched-link" href="#">Ir al post</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img alt="imagen noticia 1" class="bd-placeholder-img imagenesPost"
+                             src="img/CO/CO_1015041.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mt-5">
+            <!-- Sidebar -->
+            <div class="news-article shadow-lg">
+                <h3>Active event</h3>
+                <hr/>
+                <div id="container">
+                    <h3>Active banners</h3>
+                    <div class="d-flex flex-column align-items-center" data-importance="2">
+                        <img class="w-100" src="./img/Banners/GB_10000001.png" style="max-width: 100%;"/>
+                        <h5>Prueba</h5>
+                        <div id="countdown13"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        fetch('./data/1001011.json')
-            .then(response => response.json())
-            .then(data => {
-                const characters = data.Characters;
-                const skills = data.Skills;
+    function createCountdown(id, startDateUTC, endDateUTC) {
+        function updateCountdown() {
+            let currentDate = new Date();
+            let currentTimeUTC = currentDate.getTime() + (currentDate.getTimezoneOffset() * 60000);
+            let startDate = new Date(startDateUTC);
+            let endDate = new Date(endDateUTC);
 
-                // Process Characters
-                if (characters.length > 0) {
-                    const characterKeys = Object.keys(characters[0]);
-                    generateTableHeader(characterKeys, 'characters-header');
-                    populateTable(characters, 'characters-body', characterKeys);
-                }
+            let difference = Math.floor((endDate - currentTimeUTC) / 1000);
 
-                // Process Skills with and without +
-                const skillsPlus = skills.filter(skill => skill.Name.endsWith('+'));
-                const skillsMinus = skills.filter(skill => !skill.Name.endsWith('+'));
+            let element = document.getElementById(id);
 
-                if (skillsPlus.length > 0) {
-                    const skillPlusKeys = Object.keys(skillsPlus[0]).filter(key => key !== 'Code');
-                    skillPlusKeys.unshift('SkillIcon'); // Add SkillIcon as the first column
-                    generateTableHeader(skillPlusKeys, 'skills-plus-header');
-                    populateSkillsTable(skillsPlus, 'skills-plus-body', skillPlusKeys);
-                }
+            if (difference <= 0) {
+                clearInterval(timer);
+                element.innerHTML = 'El contador ha terminado';
+                let image = element.closest('.d-flex').querySelector('img');
+                image.classList.add('grayscale');
+                return;
+            }
 
-                if (skillsMinus.length > 0) {
-                    const skillMinusKeys = Object.keys(skillsMinus[0]).filter(key => key !== 'Code');
-                    skillMinusKeys.unshift('SkillIcon'); // Add SkillIcon as the first column
-                    generateTableHeader(skillMinusKeys, 'skills-minus-header');
-                    populateSkillsTable(skillsMinus, 'skills-minus-body', skillMinusKeys);
-                }
-            })
-            .catch(error => console.error('Error fetching the JSON:', error));
+            let days = Math.floor(difference / (24 * 60 * 60));
+            let hours = Math.floor((difference % (24 * 60 * 60)) / (60 * 60));
+            let minutes = Math.floor((difference % (60 * 60)) / 60);
+
+            element.innerHTML = days + ' días, ' + hours + ' horas, ' + minutes + ' minutos';
+        }
+
+        let timer = setInterval(updateCountdown, 1000);
+    }
+
+    createCountdown('countdown13', '2024-08-06T04:00:00Z', '2024-08-20T04:00:00Z');
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let container = document.getElementById('container');
+        let elements = container.querySelectorAll('[data-importance]');
+
+        let elementsArray = Array.from(elements);
+
+        elementsArray.sort(function (a, b) {
+            let timeRemainingA = getTimeRemaining(a.querySelector('[id^="countdown"]').textContent.trim());
+            let timeRemainingB = getTimeRemaining(b.querySelector('[id^="countdown"]').textContent.trim());
+
+            if (timeRemainingA.total < timeRemainingB.total) {
+                return -1;
+            } else if (timeRemainingA.total > timeRemainingB.total) {
+                return 1;
+            } else {
+                let importanceA = parseInt(a.getAttribute('data-importance'));
+                let importanceB = parseInt(b.getAttribute('data-importance'));
+                return importanceA - importanceB;
+            }
+        });
+
+        elementsArray.forEach(function (element) {
+            container.appendChild(element);
+        });
+
+        startServerResetCountdown();
     });
 
-    function generateTableHeader(keys, headerId) {
-        const headerRow = document.getElementById(headerId);
-        keys.forEach(key => {
-            const th = document.createElement('th');
-            th.textContent = key;
-            headerRow.appendChild(th);
-        });
+    function getTimeRemaining(countdownText) {
+        let parts = countdownText.split(' ');
+        let days = parseInt(parts[0]);
+        let hours = parseInt(parts[2]);
+        let minutes = parseInt(parts[4]);
+        let total = days * 24 * 60 + hours * 60 + minutes;
+
+        return {
+            days: days,
+            hours: hours,
+            minutes: minutes,
+            total: total
+        };
     }
 
-    function populateTable(data, bodyId, keys) {
-        const tableBody = document.getElementById(bodyId);
-        data.forEach(item => {
-            const row = document.createElement('tr');
-            keys.forEach(key => {
-                const td = document.createElement('td');
-                td.textContent = typeof item[key] === 'object' ? JSON.stringify(item[key]) : item[key];
-                row.appendChild(td);
-            });
-            tableBody.appendChild(row);
-        });
+    function startServerResetCountdown() {
+        function updateServerResetCountdown() {
+            let now = new Date();
+            let nowUTC = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
+            let resetTime = new Date();
+            resetTime.setUTCHours(19, 0, 0, 0);
+
+            if (nowUTC > resetTime) {
+                resetTime.setUTCDate(resetTime.getUTCDate() + 1);
+            }
+
+            let timeRemaining = resetTime - nowUTC;
+            let hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+            let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById('reset-countdown').innerHTML = hours + ' horas, ' + minutes + ' minutos, ' + seconds + ' segundos';
+
+            document.getElementById('server-time').innerHTML = nowUTC.toISOString().split('T')[0] + ' ' + nowUTC.toTimeString().split(' ')[0];
+        }
+
+        setInterval(updateServerResetCountdown, 1000);
     }
 
-    function populateSkillsTable(data, bodyId, keys) {
-        const tableBody = document.getElementById(bodyId);
-        data.forEach(item => {
-            const row = document.createElement('tr');
-            keys.forEach(key => {
-                const td = document.createElement('td');
-                if (key === 'SkillIcon') {
-                    const img = document.createElement('img');
-                    const skillIconCode = item.SkillIconCode.toString().padStart(7, '0');
-                    img.src = `/img/SkillIcon/BI_${skillIconCode}.png`;
-                    img.alt = 'Skill Icon';
-                    img.className = 'skill-icon';
-                    td.appendChild(img);
-                } else {
-                    td.textContent = typeof item[key] === 'object' ? JSON.stringify(item[key]) : item[key];
-                }
-                row.appendChild(td);
-            });
-            tableBody.appendChild(row);
-        });
+    function jptwitter() {
+        document.getElementById("eng").style.display = "none";
+        document.getElementById("jp").style.display = "block";
     }
+
+    function engtwitter() {
+        document.getElementById("eng").style.display = "block";
+        document.getElementById("jp").style.display = "none";
+    }
+
+
 </script>
 </body>
 </html>
