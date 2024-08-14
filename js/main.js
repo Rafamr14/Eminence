@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chElement && imgElement && titleElement) {
         const skillCode = chElement.textContent || chElement.innerText;
 
-        const url = `../data/${skillCode}.json`;
+        const url = `../data/characters/${skillCode}.json`;
         const imagenMain = `../img/CH/IL_${skillCode}.png`;
 
         imgElement.src = imagenMain;
