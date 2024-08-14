@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const characterInfo = data.Characters[0];
                 const name = characterInfo.Name || 'Unknown Name';
                 const title = characterInfo.Title || 'Unknown Title';
-                
+
                 titleElement.textContent = `${title} ${name}`;
 
                 const rarityImages = {
