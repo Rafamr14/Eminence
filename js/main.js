@@ -22,7 +22,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 const characterInfo = data.Characters[0];
                 const name = characterInfo.Name || 'Unknown Name';
                 const title = characterInfo.Title || 'Unknown Title';
+                
                 titleElement.textContent = `${title} ${name}`;
+
+                const rarityImages = {
+                    1: "Rare_A.png",
+                    2: "Rare_S.png",
+                    3: "Rare_SS_01.png"
+                };
+                const rarity = characterInfo.DefaultRarity;
+
+                if (rarityImages[rarity]) {
+                    const rarityImg = document.createElement('img');
+                    rarityImg.src = `../img/CHroles/${rarityImages[rarity]}`;
+                    rarityImg.alt = `Rarity ${rarity}`;
+                    titleElement.appendChild(rarityImg);
+                }
+
+                const attribute = characterInfo.Attribute;
+                const role = characterInfo.Role;
+                const attributeRoleImg = document.createElement('img');
+                attributeRoleImg.src = `../img/CHroles/Color_0${attribute}_${role}.png`;
+                attributeRoleImg.alt = `Attribute ${attribute} Role ${role}`;
+                titleElement.appendChild(attributeRoleImg);
 
                 const characters = data.Characters.filter(character =>
                     character.Rarity !== undefined &&
