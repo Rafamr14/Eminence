@@ -106,7 +106,7 @@
 
     // Función para cargar el contenido según el idioma seleccionado
     function loadLanguage(language) {
-        let fileUrl = language === 'english' ? '/data/requiem.json' : '/data/requiem_jp.json';
+        let fileUrl = language === 'english' ? '../data/requiem.json' : '../data/requiem_jp.json';
 
         fetch(fileUrl)
             .then(response => response.json())
