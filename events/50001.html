@@ -56,42 +56,154 @@
         </div>
     </nav>
 </header>
-<div class="d-flex justify-content-center align-items-center mt-3 w-100 px-0 img-fluid w-100">
-    <h1 class="text-center w-100 m-0">
-        Intro
-    </h1>
+
+<!-- Botones para cambiar el idioma -->
+<div class="d-flex justify-content-center mt-3">
+    <button class="btn btn-primary me-2" onclick="loadLanguage('english')">English</button>
+    <button class="btn btn-secondary" onclick="loadLanguage('japanese')">日本語</button>
 </div>
 
-<div class="d-flex flex-wrap justify-content-center mt-3 mx-md-3">
-    <div class="col-12 col-md-6 mb-3 px-md-3">
-        <img src="../img/Eventos/GU_10001.png" class="shadow-lg img-fluid d-block mx-auto" alt="">
-    </div>
-    <div class="col-12 col-md-6 px-md-3">
-        <div class="table-responsive">
-        </div>
-    </div>
+<div class="d-flex justify-content-center align-items-center mt-3 w-100 px-0 img-fluid w-100">
+    <h1 class="text-center w-100 m-0">Requiem for Scattered Shadows Part 1</h1>
 </div>
 
 <div class="container mt-3">
-    <div id="episodes-container" class="table-responsive"></div>
+    <!-- Contenedor para los episodios -->
+    <div id="episodeContainer" class="table-responsive">
+        <!-- Los episodios serán generados aquí dinámicamente -->
+    </div>
 </div>
 
 <script>
-    function e1() {
-        var episode1 = document.getElementById("episode1");
-        var episode12 = document.getElementById("episode1-2");
-        if (episode1.style.display === "none" && episode12.style.display === "none") {
-            episode1.style.display = "";
-            episode12.style.display = "";
-        } else {
-            episode1.style.display = "none";
-            episode12.style.display = "none";
+    const speakerMapping = {
+        "Cid": [100101, 100102, 100103, 100104, 100105, 100106, 100107, 100108],
+        "Alpha": [100201, 100202, 100203, 100204, 100205, 100206, 100207],
+        "Beta": [100301, 100302, 100303, 100304, 100305, 100306, 100307],
+        "Gamma": [100401, 100402, 100403, 100404, 100405, 100406, 100407],
+        "Delta": [100501, 100502, 100503, 100504, 100505],
+        "Epsilon": [100601, 100602, 100603, 100604, 100605, 100606, 100607],
+        "Zeta": [100701, 100702, 100703, 100704, 100705, 100706],
+        "Eta": [100801, 100802, 100803, 100804, 100805, 100806, 100807],
+        "Nu": [100901, 100902, 100903],
+        "Claire": [101201, 101202, 101203, 101204, 101205, 101206],
+        "Alexia": [101301, 101302, 101303, 101304, 101305, 101306],
+        "Iris": [101401, 101402, 101403],
+        "No. 666": [101501, 101502, 101503],
+        "Rose": [101501, 101502, 101503, 101504],
+        "Sherry": [101601, 101602, 101603],
+        "Aurora": [1017051, 101702, 101706],
+        "Beatrix": [102001, 102002],
+        "Annerose": [102101],
+        "Lambda": [102201],
+        "Victoria": [102302],
+        "Elisabeth": [102401],
+        "Yukime": [102501],
+        "Subtitle": [1000001],
+        "Maximilian": [404701],
+        "Po": [4019011],
+        "Skel": [4018011]
+    };
+
+    // Función para cargar el contenido según el idioma seleccionado
+    function loadLanguage(language) {
+        let fileUrl = language === 'english' ? '../data/requiem1.json' : '../data/requiem1_jp.json';
+
+        fetch(fileUrl)
+            .then(response => response.json())
+            .then(data => {
+                displayEpisodes(data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+
+    // Función para mostrar los episodios
+    function displayEpisodes(data) {
+        const container = document.getElementById('episodeContainer');
+        container.innerHTML = ''; // Limpiar el contenedor antes de mostrar nuevos datos
+
+        for (const episodeNumber in data) {
+            const episodeData = data[episodeNumber];
+            createEpisodeTable(container, episodeData, episodeNumber);
         }
     }
 
-    // Repetir el patrón para las funciones de episodios restantes
+    // Función para crear una tabla de episodios
+    function createEpisodeTable(container, episodeData, episodeNumber) {
+        const table = document.createElement('table');
+        table.className = 'table table-bordered table-striped';
 
+        // Crear el encabezado de la tabla
+        const thead = document.createElement('thead');
+        thead.className = 'bg-warning text-white';
+        const headerRow = document.createElement('tr');
+        const headerCell = document.createElement('th');
+        headerCell.colSpan = 3;
+        headerCell.className = 'text-center toggler';
+        headerCell.style.cursor = 'pointer';
+        headerCell.textContent = 'Episode ' + episodeNumber;
+        headerRow.appendChild(headerCell);
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        // Crear el cuerpo de la tabla
+        const tbody = document.createElement('tbody');
+        tbody.id = 'episode-' + episodeNumber;
+
+        // Añadir contenido de episodios desde los datos
+        episodeData.forEach(entry => {
+            const row = document.createElement('tr');
+
+            const iconCell = document.createElement('td');
+            iconCell.className = 'text-center align-middle';
+            const iconImg = document.createElement('img');
+
+            let speakerResourceId = getSpeakerResourceId(entry);
+            if (speakerResourceId) {
+                iconImg.src = `../img/IconoPj/IC_${speakerResourceId}1.png`;
+                iconImg.width = 64;
+                iconImg.height = 64;
+            }
+            iconCell.appendChild(iconImg);
+            row.appendChild(iconCell);
+
+            const nameCell = document.createElement('td');
+            nameCell.className = 'text-center align-middle';
+            nameCell.textContent = entry.SpeakerName;
+            row.appendChild(nameCell);
+
+            const textCell = document.createElement('td');
+            textCell.className = 'text-center align-middle';
+            textCell.textContent = entry.Text;
+            row.appendChild(textCell);
+
+            tbody.appendChild(row);
+        });
+
+        table.appendChild(tbody);
+        container.appendChild(table);
+    }
+
+    // Función para obtener el ResourceId del personaje
+    function getSpeakerResourceId(skill) {
+        if (skill.SpeakerName && speakerMapping.hasOwnProperty(skill.SpeakerName)) {
+            const possibleResourceIds = speakerMapping[skill.SpeakerName];
+            for (let resourceId of possibleResourceIds) {
+                if ((skill.LeftCharacter && skill.LeftCharacter.ResourceId === resourceId) ||
+                    (skill.RightCharacter && skill.RightCharacter.ResourceId === resourceId) ||
+                    (skill.CenterCharacter && skill.CenterCharacter.ResourceId === resourceId)) {
+                    return resourceId;
+                }
+            }
+        }
+        return speakerMapping[skill.SpeakerName] ? speakerMapping[skill.SpeakerName][0] : 1000002;
+    }
+
+    // Cargar contenido en inglés por defecto al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+        loadLanguage('english');
+    });
 </script>
-<script src="../js/events.js"></script>
 </body>
 </html>
