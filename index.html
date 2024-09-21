@@ -15,36 +15,72 @@
         /* 1. General Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4; /* Fondo gris claro para todo el sitio */
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* 2. Navbar Styles */
+        /* 2. CSS Variables for Light and Dark Modes */
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --navbar-bg: linear-gradient(90deg, #343a40, #495057);
+            --navbar-text: #ffffff;
+            --nav-link-hover: #adb5bd;
+            --news-bg: #e0e0e0;
+            --news-hover-bg: #d5d5d5;
+            --custom-bg-color: #cfd8dc;
+            --custom-bg-hover: #b0bec5;
+            --server-bg: #b0bec5;
+            --server-hover-bg: #90a4ae;
+            --button-bg: #343a40;
+            --button-hover-bg: #495057;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --navbar-bg: linear-gradient(90deg, #1f1f1f, #2c2c2c);
+            --navbar-text: #e0e0e0;
+            --nav-link-hover: #ffffff;
+            --news-bg: #2c2c2c;
+            --news-hover-bg: #3a3a3a;
+            --custom-bg-color: #424242;
+            --custom-bg-hover: #616161;
+            --server-bg: #424242;
+            --server-hover-bg: #616161;
+            --button-bg: #1f1f1f;
+            --button-hover-bg: #2c2c2c;
+        }
+
+        /* 3. Navbar Styles */
         header {
-            background: linear-gradient(90deg, #343a40, #495057);
+            background: var(--navbar-bg);
+            transition: background 0.3s;
         }
 
         .navbar-brand {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             font-size: 1.5rem;
+            color: var(--navbar-text) !important;
         }
 
         .nav-link {
             font-weight: 500;
             transition: color 0.3s;
-            color: #ffffff !important; /* Forzar color blanco */
+            color: var(--navbar-text) !important;
         }
 
         .nav-link:hover {
-            color: #adb5bd;
+            color: var(--nav-link-hover) !important;
         }
 
-        /* 3. News Article Styles */
+        /* 4. News Article Styles */
         .news-article {
-            background-color: #e0e0e0; /* Gris suave para reducir el blanco */
+            background-color: var(--news-bg);
             padding: 25px;
             margin-bottom: 30px;
             border-radius: 10px;
@@ -54,12 +90,12 @@
 
         .news-article:hover {
             transform: translateY(-5px);
-            background-color: #d5d5d5; /* Cambio de color al pasar el cursor */
+            background-color: var(--news-hover-bg);
         }
 
-        /* 4. Custom Background for Specific Div */
+        /* 5. Custom Background for Specific Div */
         .custom-bg {
-            background-color: #cfd8dc; /* Gris más suave para el contenedor específico */
+            background-color: var(--custom-bg-color);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -67,10 +103,10 @@
         }
 
         .custom-bg:hover {
-            background-color: #b0bec5; /* Tono ligeramente más oscuro al pasar el cursor */
+            background-color: var(--custom-bg-hover);
         }
 
-        /* 5. Image Container Styles */
+        /* 6. Image Container Styles */
         .image-container {
             width: 250px;
             height: 250px;
@@ -81,17 +117,17 @@
         .imagenesPost {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+            object-fit: cover;
             transition: transform 0.3s;
         }
 
         .imagenesPost:hover {
-            transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+            transform: scale(1.05);
         }
 
-        /* 6. Server Time Styles */
+        /* 7. Server Time Styles */
         .server-time-container {
-            background-color: #b0bec5; /* Fondo ligeramente más oscuro para mayor contraste */
+            background-color: var(--server-bg);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -99,36 +135,36 @@
         }
 
         .server-time-container:hover {
-            background-color: #90a4ae; /* Cambio de color al pasar el cursor */
+            background-color: var(--server-hover-bg);
         }
 
-        .server-time-container h4 {
-            color: #000000;
-        }
-
+        .server-time-container h4,
         .server-time-container p {
-            color: #000000;
+            color: var(--text-color);
+            transition: color 0.3s;
         }
 
         .server-time-container p.fw-bold {
-            color: #000000; /* Color destacado para los valores */
+            color: var(--text-color);
         }
 
-        /* 7. Other General Styles */
+        /* 8. Button Styles */
         .btn-custom {
-            background-color: #343a40;
-            color: #ffffff;
+            background-color: var(--button-bg);
+            color: var(--navbar-text);
             border: none;
             border-radius: 5px;
-            padding: 10px 20px;
-            transition: background-color 0.3s;
+            padding: 8px 16px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
         }
 
         .btn-custom:hover {
-            background-color: #495057;
-            color: #ffffff;
+            background-color: var(--button-hover-bg);
+            color: var(--navbar-text);
         }
 
+        /* 9. Other General Styles */
         .btn-group .btn {
             border-radius: 5px;
             margin: 0 5px;
@@ -138,7 +174,7 @@
             color: #555555;
         }
 
-        /* 8. Responsive Adjustments */
+        /* 10. Responsive Adjustments */
         @media (max-width: 768px) {
             .twitterhide {
                 display: none;
@@ -154,7 +190,7 @@
             }
 
             .server-time-container {
-                background-color: #90a4ae; /* Ajuste de color para móviles */
+                background-color: var(--server-hover-bg);
             }
         }
     </style>
@@ -190,6 +226,12 @@
                         <a class="nav-link d-flex align-items-center" href="./Events.html">
                             <img class="me-2" height="24" src="./img/UI/Btn_L_06_Off.png" width="24" alt="Events"/>Events
                         </a>
+                    </li>
+                    <!-- Botón de Modo Noche -->
+                    <li class="nav-item ms-3">
+                        <button id="toggle-dark-mode" class="btn-custom">
+                            🌙 Modo Noche
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -285,6 +327,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeo5sYB1y1KXJH0C5eVjhIRoHc5q1a4DJUkQp1HKmGfN6KU"
         crossorigin="anonymous"></script>
 <script>
+    // Función para crear el contador de tiempo
     function createCountdown(id, startDateUTC, endDateUTC) {
         function updateCountdown() {
             let currentDate = new Date();
@@ -319,6 +362,23 @@
 
     createCountdown('countdown13', '2024-08-06T04:00:00Z', '2024-08-20T04:00:00Z');
 
+    // Función para obtener el tiempo restante
+    function getTimeRemaining(countdownText) {
+        let parts = countdownText.split(' ');
+        let days = parseInt(parts[0]);
+        let hours = parseInt(parts[2]);
+        let minutes = parseInt(parts[4]);
+        let total = days * 24 * 60 + hours * 60 + minutes;
+
+        return {
+            days: days,
+            hours: hours,
+            minutes: minutes,
+            total: total
+        };
+    }
+
+    // Función para ordenar los eventos por tiempo restante y importancia
     document.addEventListener("DOMContentLoaded", function () {
         let container = document.getElementById('container');
         if (container) {
@@ -349,21 +409,7 @@
         startServerResetCountdown();
     });
 
-    function getTimeRemaining(countdownText) {
-        let parts = countdownText.split(' ');
-        let days = parseInt(parts[0]);
-        let hours = parseInt(parts[2]);
-        let minutes = parseInt(parts[4]);
-        let total = days * 24 * 60 + hours * 60 + minutes;
-
-        return {
-            days: days,
-            hours: hours,
-            minutes: minutes,
-            total: total
-        };
-    }
-
+    // Función para el contador de reinicio del servidor
     function startServerResetCountdown() {
         function updateServerResetCountdown() {
             let now = new Date();
@@ -389,6 +435,7 @@
         updateServerResetCountdown(); // Inicializar inmediatamente
     }
 
+    // Funciones para cambiar los feeds de Twitter
     function jptwitter() {
         document.getElementById("eng").style.display = "none";
         document.getElementById("jp").style.display = "block";
@@ -398,6 +445,37 @@
         document.getElementById("eng").style.display = "block";
         document.getElementById("jp").style.display = "none";
     }
+
+    // Funcionalidad para el Modo Noche
+    const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    // Verificar la preferencia inicial del usuario
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleDarkModeButton.textContent = '☀️ Day Mode';
+    } else if (localStorage.getItem('dark-mode') === 'disabled') {
+        document.body.classList.remove('dark-mode');
+        toggleDarkModeButton.textContent = '🌙 Night Mode';
+    } else if (prefersDarkScheme.matches) {
+        document.body.classList.add('dark-mode');
+        toggleDarkModeButton.textContent = '☀️ Day Mode';
+    }
+
+    // Evento para alternar el modo noche
+    toggleDarkModeButton.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+
+        let darkModeEnabled = document.body.classList.contains('dark-mode');
+
+        if (darkModeEnabled) {
+            localStorage.setItem('dark-mode', 'enabled');
+            toggleDarkModeButton.textContent = '☀️ Day Mode';
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+            toggleDarkModeButton.textContent = '🌙 Night Mode';
+        }
+    });
 </script>
 </body>
 </html>
