@@ -103,11 +103,13 @@
         "Po": [4019011],
         "Skel": [4018011]
     };
+    let eventoID = document.getElementById('eID').innerText;
 
     // Función para cargar el contenido según el idioma seleccionado
     function loadLanguage(language) {
-        let fileUrl = language === 'english' ? '../data/requiem1.json' : '../data/requiem1_jp.json';
-
+        let fileUrl = language === 'english'
+            ? `../data/events/${eventoID}.json`
+            : `../data/events_jp/${eventoID}.json`;
         fetch(fileUrl)
             .then(response => response.json())
             .then(data => {
@@ -132,7 +134,7 @@
     // Función para crear una tabla de episodios
     function createEpisodeTable(container, episodeData, episodeNumber) {
         const table = document.createElement('table');
-        table.className = 'table table-bordered table-striped';
+        table.className = 'table table-bordered table-striped mb-3';
 
         // Crear el encabezado de la tabla
         const thead = document.createElement('thead');
@@ -143,6 +145,10 @@
         headerCell.className = 'text-center toggler';
         headerCell.style.cursor = 'pointer';
         headerCell.textContent = 'Episode ' + episodeNumber;
+        headerCell.onclick = function () {
+            const tbody = this.closest('table').querySelector('tbody');
+            tbody.style.display = tbody.style.display === 'none' ? '' : 'none';
+        };
         headerRow.appendChild(headerCell);
         thead.appendChild(headerRow);
         table.appendChild(thead);
@@ -150,6 +156,7 @@
         // Crear el cuerpo de la tabla
         const tbody = document.createElement('tbody');
         tbody.id = 'episode-' + episodeNumber;
+        tbody.style.display = 'none'; // Inicialmente oculto
 
         // Añadir contenido de episodios desde los datos
         episodeData.forEach(entry => {
@@ -187,7 +194,13 @@
 
     // Función para obtener el ResourceId del personaje
     function getSpeakerResourceId(skill) {
-        if (skill.SpeakerName && speakerMapping.hasOwnProperty(skill.SpeakerName)) {
+        // Comprobar si SpeakerName es una cadena vacía
+        if (!skill.SpeakerName || skill.SpeakerName.trim() === "") {
+            // Usar un valor predeterminado si SpeakerName está vacío
+            return 1000001; // Valor predeterminado que tú especifiques
+        }
+
+        if (speakerMapping.hasOwnProperty(skill.SpeakerName)) {
             const possibleResourceIds = speakerMapping[skill.SpeakerName];
             for (let resourceId of possibleResourceIds) {
                 if ((skill.LeftCharacter && skill.LeftCharacter.ResourceId === resourceId) ||
@@ -196,12 +209,16 @@
                     return resourceId;
                 }
             }
+            // Si no se encuentra un ResourceId coincidente, devolver el primero de la lista
+            return possibleResourceIds[0];
         }
-        return speakerMapping[skill.SpeakerName] ? speakerMapping[skill.SpeakerName][0] : 1000002;
+
+        // Si no hay coincidencias en speakerMapping, devolver un valor predeterminado
+        return 1000002;
     }
 
     // Cargar contenido en inglés por defecto al cargar la página
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         loadLanguage('english');
     });
 </script>
