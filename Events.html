@@ -1,46 +1,180 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>ShadowBase DB</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
-    <link href="./css/Styles.css" rel="stylesheet"/>
-    <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        /* 1. CSS Variables for Light and Dark Modes */
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --navbar-bg: linear-gradient(90deg, #343a40, #495057);
+            --navbar-text: #ffffff;
+            --nav-link-hover: #adb5bd;
+            --card-bg: #ffffff;
+            --card-text: #333333;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+            --button-bg: #343a40;
+            --button-hover-bg: #495057;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --navbar-bg: linear-gradient(90deg, #1f1f1f, #2c2c2c);
+            --navbar-text: #e0e0e0;
+            --nav-link-hover: #ffffff;
+            --card-bg: #1e1e1e;
+            --card-text: #e0e0e0;
+            --card-shadow: rgba(0, 0, 0, 0.5);
+            --button-bg: #1f1f1f;
+            --button-hover-bg: #2c2c2c;
+        }
+
+        /* 2. General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* 3. Navbar Styles */
+        header {
+            background: var(--navbar-bg);
+            transition: background 0.3s;
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--navbar-text) !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: color 0.3s;
+            color: var(--navbar-text) !important;
+        }
+
+        .nav-link:hover {
+            color: var(--nav-link-hover) !important;
+        }
+
+        /* 4. Button Styles */
+        .btn-custom {
+            background-color: var(--button-bg);
+            color: var(--navbar-text);
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--button-hover-bg);
+            color: var(--navbar-text);
+        }
+
+        /* 5. Card Styles */
+        .card {
+            background-color: var(--card-bg);
+            color: var(--card-text);
+            box-shadow: 0 4px 6px var(--card-shadow);
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px var(--card-shadow);
+        }
+
+        /* 6. Image Wrapper Styles */
+        .image-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 200px; /* Altura fija para todas las imágenes */
+            overflow: hidden;
+            border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+        }
+
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Mantiene la imagen completa sin cortarse */
+            transition: transform 0.3s;
+        }
+
+        .image-wrapper img:hover {
+            transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+        }
+
+        /* 7. Responsive Adjustments */
+        @media (max-width: 768px) {
+            .image-wrapper {
+                height: 150px; /* Altura ajustada para pantallas pequeñas */
+                border-radius: 10px 10px 0 0; /* Mantener bordes redondeados */
+            }
+            .card {
+                width: 100vh;
+            }
+        }
+    </style>
 </head>
-<body class="font-sans bg-graybg">
-<header class="bg-dark shadow-sm">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-claire text-white">
+<body>
+<header class="shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand font-weight-bold text-white" href="#">ShadowBase DB</a>
+            <a class="navbar-brand text-white" href="#">ShadowBase DB</a>
             <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="./index.html">
-                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_01_Off.png" width="26"/>
-                            Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="./Characters.html">
-                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_02_Off.png" width="32"/>Characters
+                        <a class="nav-link d-flex align-items-center" href="./index.html">
+                            <img class="me-2" height="32" src="./img/UI/Btn_L_01_Off.png" width="26" alt="Inicio"/>
+                            Inicio
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="./banners.html">
-                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_06_Off.png" width="32"/>Banners
+                        <a class="nav-link d-flex align-items-center" href="./Characters.html">
+                            <img class="me-2" height="32" src="./img/UI/Btn_L_02_Off.png" width="32" alt="Characters"/>Characters
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="./Events.html">
-                            <img class="align-middle me-2" height="32" src="./img/UI/Btn_L_06_Off.png" width="32"/>Events
+                        <a class="nav-link d-flex align-items-center" href="./banners.html">
+                            <img class="me-2" height="32" src="./img/UI/Btn_L_06_Off.png" width="32" alt="Banners"/>Banners
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./Events.html">
+                            <img class="me-2" height="32" src="./img/UI/Btn_L_06_Off.png" width="32" alt="Events"/>Events
+                        </a>
+                    </li>
+                    <!-- Botón de Modo Noche -->
+                    <li class="nav-item ms-3">
+                        <button id="toggle-dark-mode" class="btn-custom">
+                            🌙 Modo Noche
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -49,161 +183,343 @@
 </header>
 <main class="container my-5">
     <div class="row g-4">
-        <div class="col-md-6 col-lg-3 d-flex align-self-center">
-            <div class="card shadow-sm h-100"><a class="text-dark text-decoration-none" href="./events/40001.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0005.png"/>
-                <div class="card-body"><h5 class="card-title">Holiday Rhapsody</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 1 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40001.html">
+                    <div class="image-wrapper">
+                        <img alt="Holiday Rhapsody" class="card-img-top" src="./img/Eventos/CampaignBanner_0005.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Holiday Rhapsody</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3 d-flex align-self-center">
-            <div class="card shadow-sm h-100"><a class="text-dark text-decoration-none" href="./events/40002.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0006.png"/>
-                <div class="card-body"><h5 class="card-title">Fantastic! The Great Ize-athlon!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 2 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40002.html">
+                    <div class="image-wrapper">
+                        <img alt="Fantastic! The Great Ize-athlon!" class="card-img-top" src="./img/Eventos/CampaignBanner_0006.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fantastic! The Great Ize-athlon!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3 d-flex align-self-center">
-            <div class="card shadow-sm h-100"><a class="text-dark text-decoration-none" href="./events/40003.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0007.png"/>
-                <div class="card-body"><h5 class="card-title">Natural vs. Artificial: Chocolate Showdown!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 3 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40003.html">
+                    <div class="image-wrapper">
+                        <img alt="Natural vs. Artificial: Chocolate Showdown!" class="card-img-top" src="./img/Eventos/CampaignBanner_0007.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Natural vs. Artificial: Chocolate Showdown!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3 d-flex">
-            <div class="card shadow-sm h-100"><a class="text-dark text-decoration-none" href="./events/40004.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0008.png"/>
-                <div class="card-body"><h5 class="card-title">Rose of Garden</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 4 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40004.html">
+                    <div class="image-wrapper">
+                        <img alt="Rose of Garden" class="card-img-top" src="./img/Eventos/CampaignBanner_0008.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Rose of Garden</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40005.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0009.png"/>
-                <div class="card-body"><h5 class="card-title">HIGHEST DREAM</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 5 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40005.html">
+                    <div class="image-wrapper">
+                        <img alt="HIGHEST DREAM" class="card-img-top" src="./img/Eventos/CampaignBanner_0009.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">HIGHEST DREAM</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40006.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0010.png"/>
-                <div class="card-body"><h5 class="card-title">Clever &amp; Lucky Bunny Girls!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 6 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40006.html">
+                    <div class="image-wrapper">
+                        <img alt="Clever & Lucky Bunny Girls!" class="card-img-top" src="./img/Eventos/CampaignBanner_0010.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Clever &amp; Lucky Bunny Girls!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40007.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0011.png"/>
-                <div class="card-body"><h5 class="card-title">Shadows Unite! Let's party!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 7 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40007.html">
+                    <div class="image-wrapper">
+                        <img alt="Shadows Unite! Let's party!" class="card-img-top" src="./img/Eventos/CampaignBanner_0011.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Shadows Unite! Let's party!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40008.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0012.png"/>
-                <div class="card-body"><h5 class="card-title">Truth Seekers</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 8 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40008.html">
+                    <div class="image-wrapper">
+                        <img alt="Truth Seekers" class="card-img-top" src="./img/Eventos/CampaignBanner_0012.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Truth Seekers</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40009.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0013.png"/>
-                <div class="card-body"><h5 class="card-title">Midsummer Triangle</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 9 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40009.html">
+                    <div class="image-wrapper">
+                        <img alt="Midsummer Triangle" class="card-img-top" src="./img/Eventos/CampaignBanner_0013.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Midsummer Triangle</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40010.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0014.png"/>
-                <div class="card-body"><h5 class="card-title">Dreamy Summer Sunset</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 10 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40010.html">
+                    <div class="image-wrapper">
+                        <img alt="Dreamy Summer Sunset" class="card-img-top" src="./img/Eventos/CampaignBanner_0014.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dreamy Summer Sunset</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40011.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0015.png"/>
-                <div class="card-body"><h5 class="card-title">Interlude</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40010.html">
+                    <div class="image-wrapper">
+                        <img alt="Interlude" class="card-img-top" src="./img/Eventos/CampaignBanner_0015.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Interlude</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40012.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0016.png"/>
-                <div class="card-body"><h5 class="card-title">Let's Smile! Halloween Night!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40010.html">
+                    <div class="image-wrapper">
+                        <img alt="Interlude" class="card-img-top" src="./img/Eventos/CampaignBanner_0016.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Let's Smile! Halloween Night</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40013.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0017.png"/>
-                <div class="card-body"><h5 class="card-title">Amnesia?! Noob Again!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 11 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40011.html">
+                    <div class="image-wrapper">
+                        <img alt="Amnesia?! Noob Again!" class="card-img-top" src="./img/Eventos/CampaignBanner_0017.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Amnesia?! Noob Again!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40014.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0018.png"/>
-                <div class="card-body"><h5 class="card-title">A Gift from Miss Santa!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40011.html">
+                    <div class="image-wrapper">
+                        <img alt="A Gift From Miss Santa" class="card-img-top" src="./img/Eventos/CampaignBanner_0018.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">A Gift From Miss Santa</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40015.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0019.png"/>
-                <div class="card-body"><h5 class="card-title">Run! The Great Ize-athlon 2.0!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40015.html">
+                    <div class="image-wrapper">
+                        <img alt="Run! The Great Ize-athlon 2.0!" class="card-img-top" src="./img/Eventos/CampaignBanner_0019.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Run! The Great Ize-athlon 2.0!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40016.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0020.png"/>
-                <div class="card-body"><h5 class="card-title">Masquerade</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+
+        <!-- Tarjeta 15 -->
+
+        <!-- Tarjeta 16 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40016.html">
+                    <div class="image-wrapper">
+                        <img alt="Masquerade" class="card-img-top" src="./img/Eventos/CampaignBanner_0020.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Masquerade</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40017.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0022.png"/>
-                <div class="card-body"><h5 class="card-title">Be Mine! Sweet Valentine</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 17 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40017.html">
+                    <div class="image-wrapper">
+                        <img alt="Be Mine! Sweet Valentine" class="card-img-top" src="./img/Eventos/CampaignBanner_0022.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Be Mine! Sweet Valentine</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40018.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0021.png"/>
-                <div class="card-body"><h5 class="card-title">Trash-Game Hunter Meets Shadow</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 18 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40018.html">
+                    <div class="image-wrapper">
+                        <img alt="Trash-Game Hunter Meets Shadow" class="card-img-top" src="./img/Eventos/CampaignBanner_0021.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Trash-Game Hunter Meets Shadow</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40019.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0023.png"/>
-                <div class="card-body"><h5 class="card-title">HIGHEST DREAM Ⅱ</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 19 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40019.html">
+                    <div class="image-wrapper">
+                        <img alt="HIGHEST DREAM Ⅱ" class="card-img-top" src="./img/Eventos/CampaignBanner_0023.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">HIGHEST DREAM Ⅱ</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40020.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0024.png"/>
-                <div class="card-body"><h5 class="card-title">The Producer in Shadow!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 20 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40020.html">
+                    <div class="image-wrapper">
+                        <img alt="The Producer in Shadow!" class="card-img-top" src="./img/Eventos/CampaignBanner_0024.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Producer in Shadow!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40021.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0026.png"/>
-                <div class="card-body"><h5 class="card-title">Stranded! Summer in the Wild?!</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 21 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40021.html">
+                    <div class="image-wrapper">
+                        <img alt="Stranded! Summer in the Wild?!" class="card-img-top" src="./img/Eventos/CampaignBanner_0026.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Stranded! Summer in the Wild?!</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card shadow-sm"><a class="text-dark text-decoration-none" href="./events/40022.html"><img
-                    alt="..." class="card-img-top" src="./img/Eventos/CampaignBanner_0027.png"/>
-                <div class="card-body"><h5 class="card-title">A Dreamy Summer With You</h5>
-                    <p class="card-text text-muted">Fecha: 29/11/2022</p></div>
-            </a></div>
+        <!-- Tarjeta 22 -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a class="text-dark text-decoration-none" href="./events/40022.html">
+                    <div class="image-wrapper">
+                        <img alt="A Dreamy Summer With You" class="card-img-top" src="./img/Eventos/CampaignBanner_0027.png"/>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">A Dreamy Summer With You</h5>
+                        <p class="card-text text-muted">Fecha: 29/11/2022</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </main>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeo5sYB1y1KXJH0C5eVjhIRoHc5q1a4DJUkQp1HKmGfN6KU"
+        crossorigin="anonymous"></script>
+<script>
+    // Función para alternar el modo noche
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
+        const darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleDarkModeBtn.textContent = '☀️ Modo Día';
+        } else {
+            toggleDarkModeBtn.textContent = '🌙 Modo Noche';
+        }
+
+        toggleDarkModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleDarkModeBtn.textContent = '☀️ Modo Día';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                toggleDarkModeBtn.textContent = '🌙 Modo Noche';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    });
+</script>
 </body>
 </html>
