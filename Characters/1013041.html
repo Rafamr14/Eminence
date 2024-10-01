@@ -123,17 +123,22 @@
     <img class="w-100 imgAuto" src="../img/CH/IL_1013041.png" alt="Imagen del Personaje">
 
     <!-- Sección de Characters -->
-    <h2>Personajes</h2>
+
     <div class="table-responsive">
         <table class="table table-hover table-bordered" id="characters-table">
             <tbody id="characters-body"></tbody>
         </table>
     </div>
-
+    <!-- Slider para cambiar nivel de habilidades -->
+    <div class="my-4 text-center">
+            <label for="levelSlider">Skill Level: </label>
+        <input type="range" id="levelSlider" min="1" max="10" value="1">
+        <span id="levelValue">1</span>
+    </div>
     <!-- Sección de Skills y Dupes -->
     <div class="row">
         <div class="col-md-6">
-            <h2>Habilidades</h2>
+            <h2>Skills</h2>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered" id="Skills-Table">
                     <thead>
@@ -144,7 +149,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <h2>Dupes</h2>
+            <h2>Awaken</h2>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered" id="SkillsDupes-Table">
                     <thead>
