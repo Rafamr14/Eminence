@@ -61,12 +61,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (characters.length > 0) {
                     generateCharacterTable(characters, 'characters-body', [
-                        "Rarity", "Health", "PhysicalAttack", "MagicAttack", "PhysicalDefense", "MagicDefense",
-                        "SpecialPoint", "CriticalChance.Percent", "CriticalMultiplier.Percent", "CriticalResistance.Percent",
-                        "RecoveryHealth", "RecoverySpecialPoint", "DrainHealth.Percent", "GainHeal.Percent", "GainSpecialPoint.Percent",
-                        "SpecialPointReduction.Percent", "Dodge.Percent", "Accuracy.Percent", "AttackRange", "HealthPerLevel",
-                        "PhysicalAttackPerLevel", "MagicAttackPerLevel", "PhysicalDefensePerLevel", "MagicDefensePerLevel",
-                        "FragmentItemAmount", "CurrencyAmount"
+                        "Health",
+                        "PhysicalAttack",
+                        "MagicAttack",
+                        "PhysicalDefense",
+                        "MagicDefense",
+                        "SpecialPoint",
+                        "CriticalChance.Percent",
+                        "CriticalMultiplier.Percent",
+                        "CriticalResistance.Percent",
+                        "RecoveryHealth",
+                        "RecoverySpecialPoint",
+                        "DrainHealth.Percent",
+                        "GainHeal.Percent",
+                        "GainSpecialPoint.Percent",
+                        "SpecialPointReduction.Percent",
+                        "Dodge.Percent",
+                        "Accuracy.Percent",
+                        "AttackRange",
+                        "HealthPerLevel",
+                        "PhysicalAttackPerLevel",
+                        "MagicAttackPerLevel",
+                        "PhysicalDefensePerLevel",
+                        "MagicDefensePerLevel",
+                        "FragmentItemAmount",
+                        "CurrencyAmount"
                     ]);
                 } else {
                     console.error('No se encontraron personajes con el CharacterCode especificado en los datos.');
