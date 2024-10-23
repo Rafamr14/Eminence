@@ -1,0 +1,200 @@
+/* 1. General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 2. CSS Variables for Light and Dark Modes */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --navbar-bg: linear-gradient(90deg, #343a40, #495057);
+    --navbar-text: #ffffff;
+    --nav-link-hover: #adb5bd;
+    --news-bg: #e0e0e0;
+    --news-hover-bg: #d5d5d5;
+    --custom-bg-color: #cfd8dc;
+    --custom-bg-hover: #b0bec5;
+    --server-bg: #b0bec5;
+    --server-hover-bg: #90a4ae;
+    --button-bg: #343a40;
+    --button-hover-bg: #495057;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --navbar-bg: linear-gradient(90deg, #1f1f1f, #2c2c2c);
+    --navbar-text: #e0e0e0;
+    --nav-link-hover: #ffffff;
+    --news-bg: #2c2c2c;
+    --news-hover-bg: #3a3a3a;
+    --custom-bg-color: #424242;
+    --custom-bg-hover: #616161;
+    --server-bg: #424242;
+    --server-hover-bg: #616161;
+    --button-bg: #1f1f1f;
+    --button-hover-bg: #2c2c2c;
+}
+
+/* 3. Navbar Styles */
+header {
+    background: var(--navbar-bg);
+    transition: background 0.3s;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--navbar-text) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s;
+    color: var(--navbar-text) !important;
+}
+
+.nav-link:hover {
+    color: var(--nav-link-hover) !important;
+}
+
+/* 4. News Article Styles */
+.news-article {
+    background-color: var(--news-bg);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.news-article:hover {
+    transform: translateY(-5px);
+    background-color: var(--news-hover-bg);
+}
+
+/* 5. Custom Background for Specific Div */
+.custom-bg {
+    background-color: var(--custom-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+}
+
+.custom-bg:hover {
+    background-color: var(--custom-bg-hover);
+}
+
+/* 6. Image Container Styles */
+.image-container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 0 10px 10px 0;
+    margin-left: auto;
+}
+
+.imagenesPost {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.imagenesPost:hover {
+    transform: scale(1.05);
+}
+
+/* 7. Server Time Styles */
+.server-time-container {
+    background-color: var(--server-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+}
+
+.server-time-container:hover {
+    background-color: var(--server-hover-bg);
+}
+
+.server-time-container h4,
+.server-time-container p {
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.server-time-container p.fw-bold {
+    color: var(--text-color);
+}
+
+/* 8. Button Styles */
+.btn-custom {
+    background-color: var(--button-bg);
+    color: var(--navbar-text);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--navbar-text);
+}
+
+/* 9. Responsive Adjustments */
+@media (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .server-time-container {
+        background-color: var(--server-hover-bg);
+    }
+}
+
+/* 10. Card Styles (for Events and Characters) */
+.card {
+    background-color: var(--news-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: var(--news-hover-bg);
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.05);
+}

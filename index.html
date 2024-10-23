@@ -4,203 +4,18 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>ShadowBase DB</title>
-    <!-- Google Fonts -->
+    <title>Eminence in Shadow: Master of Garden</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
     <link href="./css/Styles.css" rel="stylesheet"/>
-    <style>
-        /* 1. General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* 2. CSS Variables for Light and Dark Modes */
-        :root {
-            --bg-color: #f4f4f4;
-            --text-color: #333;
-            --navbar-bg: linear-gradient(90deg, #343a40, #495057);
-            --navbar-text: #ffffff;
-            --nav-link-hover: #adb5bd;
-            --news-bg: #e0e0e0;
-            --news-hover-bg: #d5d5d5;
-            --custom-bg-color: #cfd8dc;
-            --custom-bg-hover: #b0bec5;
-            --server-bg: #b0bec5;
-            --server-hover-bg: #90a4ae;
-            --button-bg: #343a40;
-            --button-hover-bg: #495057;
-        }
-
-        body.dark-mode {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --navbar-bg: linear-gradient(90deg, #1f1f1f, #2c2c2c);
-            --navbar-text: #e0e0e0;
-            --nav-link-hover: #ffffff;
-            --news-bg: #2c2c2c;
-            --news-hover-bg: #3a3a3a;
-            --custom-bg-color: #424242;
-            --custom-bg-hover: #616161;
-            --server-bg: #424242;
-            --server-hover-bg: #616161;
-            --button-bg: #1f1f1f;
-            --button-hover-bg: #2c2c2c;
-        }
-
-        /* 3. Navbar Styles */
-        header {
-            background: var(--navbar-bg);
-            transition: background 0.3s;
-        }
-
-        .navbar-brand {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 1.5rem;
-            color: var(--navbar-text) !important;
-        }
-
-        .nav-link {
-            font-weight: 500;
-            transition: color 0.3s;
-            color: var(--navbar-text) !important;
-        }
-
-        .nav-link:hover {
-            color: var(--nav-link-hover) !important;
-        }
-
-        /* 4. News Article Styles */
-        .news-article {
-            background-color: var(--news-bg);
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .news-article:hover {
-            transform: translateY(-5px);
-            background-color: var(--news-hover-bg);
-        }
-
-        /* 5. Custom Background for Specific Div */
-        .custom-bg {
-            background-color: var(--custom-bg-color);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: background-color 0.3s;
-        }
-
-        .custom-bg:hover {
-            background-color: var(--custom-bg-hover);
-        }
-
-        /* 6. Image Container Styles */
-        .image-container {
-            width: 250px;
-            height: 250px;
-            overflow: hidden;
-            border-radius: 0 10px 10px 0;
-            margin-left: auto; /* Asegura que la imagen se pegue al borde derecho */
-        }
-
-        .imagenesPost {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .imagenesPost:hover {
-            transform: scale(1.05);
-        }
-
-        /* 7. Server Time Styles */
-        .server-time-container {
-            background-color: var(--server-bg);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            transition: background-color 0.3s;
-        }
-
-        .server-time-container:hover {
-            background-color: var(--server-hover-bg);
-        }
-
-        .server-time-container h4,
-        .server-time-container p {
-            color: var(--text-color);
-            transition: color 0.3s;
-        }
-
-        .server-time-container p.fw-bold {
-            color: var(--text-color);
-        }
-
-        /* 8. Button Styles */
-        .btn-custom {
-            background-color: var(--button-bg);
-            color: var(--navbar-text);
-            border: none;
-            border-radius: 5px;
-            padding: 8px 16px;
-            transition: background-color 0.3s, color 0.3s;
-            cursor: pointer;
-        }
-
-        .btn-custom:hover {
-            background-color: var(--button-hover-bg);
-            color: var(--navbar-text);
-        }
-
-        /* 9. Other General Styles */
-        .btn-group .btn {
-            border-radius: 5px;
-            margin: 0 5px;
-        }
-
-        .card-text {
-            color: #555555;
-        }
-
-        /* 10. Responsive Adjustments */
-        @media (max-width: 768px) {
-            .twitterhide {
-                display: none;
-            }
-
-            .custom-bg {
-                padding: 15px;
-            }
-
-            .image-container {
-                width: 100%;
-                height: auto;
-                margin-left: 0; /* Eliminar margen en pantallas pequeñas */
-            }
-
-            .server-time-container {
-                background-color: var(--server-hover-bg);
-            }
-        }
-    </style>
+    <link href="./css/Styles-m.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand text-white" href="#">ShadowBase DB</a>
+            <a class="navbar-brand text-white" href="#">Eminence in Shadow: Master of Garden</a>
             <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
@@ -228,10 +43,10 @@
                             <img class="me-2" height="24" src="./img/UI/Btn_L_06_Off.png" width="24" alt="Events"/>Events
                         </a>
                     </li>
-                    <!-- Botón de Modo Noche -->
+                    <!-- Botón de Night Mode -->
                     <li class="nav-item ms-3">
                         <button id="toggle-dark-mode" class="btn-custom">
-                            🌙 Modo Noche
+                            🌙 Night Mode
                         </button>
                     </li>
                 </ul>
@@ -448,7 +263,7 @@
         document.getElementById("jp").style.display = "none";
     }
 
-    // Funcionalidad para el Modo Noche
+    // Funcionalidad para el Night Mode
     const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -464,7 +279,7 @@
         toggleDarkModeButton.textContent = '☀️ Day Mode';
     }
 
-    // Evento para alternar el modo noche
+    // Evento para alternar el Night Mode
     toggleDarkModeButton.addEventListener('click', function () {
         document.body.classList.toggle('dark-mode');
 

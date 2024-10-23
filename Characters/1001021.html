@@ -109,9 +109,72 @@
                 font-size: 0.9rem;
             }
         }
-    </style>
+            /* Estilos para los botones de idioma */
+        .language-button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .language-button.active {
+            border-bottom: 2px solid #1abc9c;
+        }
+
+        .language-button:hover {
+            color: #1abc9c;
+        }
+		</style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Eminence in Shadow: Master of Garden</a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./index.html">
+                            <img class="me-2" height="24" src="./img/UI/Btn_L_01_Off.png" width="24" alt="Inicio"/>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./Characters.html">
+                            <img class="me-2" height="24" src="./img/UI/Btn_L_02_Off.png" width="24" alt="Characters"/>Characters
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./banners.html">
+                            <img class="me-2" height="24" src="./img/UI/Btn_L_06_Off.png" width="24" alt="Banners"/>Banners
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./Events.html">
+                            <img class="me-2" height="24" src="./img/UI/Btn_L_06_Off.png" width="24" alt="Events"/>Events
+                        </a>
+                    </li>
+                    <!-- Botón de Night Mode -->
+                    <li class="nav-item ms-3">
+                        <button id="toggle-dark-mode" class="btn-custom">
+                            🌙 Night Mode
+                        </button>
+                    </li>
+                    <!-- Botones de idioma -->
+                    <li class="nav-item ms-3">
+                        <button class="language-button active" id="english-button" data-language="en">English</button>
+                        <button class="language-button" id="japanese-button" data-language="jp">Japanese</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 <!-- ID oculto -->
 <h1 id="chID">1001021</h1>
 
