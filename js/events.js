@@ -40,7 +40,7 @@ if (eventIDElement) {
 
             // Crear elementos de la tabla
             const table = document.createElement('table');
-            table.className = "table table-bordered table-striped";
+            table.className = "table  table-striped";
 
             const thead = document.createElement('thead');
             thead.className = "bg-warning text-white";
