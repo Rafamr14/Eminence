@@ -229,6 +229,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     // === Inserción de Imágenes de Rareza y Color en el Título ===
+                    // **MODIFICACIÓN: Eliminar imágenes existentes antes de agregar nuevas**
+                    titleElement.querySelectorAll('.rarity-img, .attribute-role-img').forEach(img => img.remove());
+
                     const characterInfo = characterData.Characters[0];
                     if (characterInfo) {
                         // Definir las imágenes de rareza
