@@ -6,187 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echoing Radiance: : Rose Oriana</title>
     <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Fuente y fondo general */
-        body {
-            background-color: #2c3e50;
-            font-family: 'Roboto', sans-serif;
-            color: #ecf0f1;
-        }
-
-        /* Contenedor principal */
-        .container {
-            margin-top: 50px;
-        }
-
-        /* Títulos */
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #ffffff; /* Color de acento actualizado */
-        }
-
-        /* Imagen responsiva con sombra y borde rojo */
-        .imgAuto {
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            border: 3px solid #dfb450; /* Borde actualizado */
-            margin-bottom: 20px;
-        }
-
-        /* Tablas estilizadas */
-        table {
-            background-color: #34495e;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        th {
-            background-color: #1abc9c; /* Mantiene el verde azulado */
-            color: #2c3e50;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        td {
-            text-align: center;
-            padding: 12px;
-            color: #ecf0f1;
-        }
-
-        tr:nth-child(even) {
-            background-color: #3c566e;
-        }
-
-        tr:hover {
-            background-color: #2980b9;
-            transition: background-color 0.3s ease;
-            color: #ffffff;
-        }
-
-        /* Estilos para las secciones de Skills y Dupes */
-        .row > div {
-            margin-bottom: 30px;
-        }
-
-        /* Iconos de habilidades */
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        /* Encabezado oculto */
-        #chID {
-            display: none;
-        }
-
-        /* Título del personaje */
-        #characterTitle {
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #34495e;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            color: #000000; /* Color de acento actualizado */
-        }
-
-        /* Ajustes responsivos adicionales */
-        .mobile-logo {
-            display: none;
-        }
-
-        /* Ajustes responsivos adicionales */
-        @media (max-width: 768px) {
-            h1, h2 {
-                font-size: 1.5rem;
-            }
-
-            .skill-icon {
-                width: 40px;
-                height: 40px;
-            }
-
-            table {
-                font-size: 0.9rem;
-            }
-            .mobile-logo {
-                display: block;
-            }
-            .pc-logo {
-                display: none;
-            }
-        }
-            /* Estilos para los botones de idioma */
-        .language-button {
-            margin-left: 10px;
-            padding: 5px 10px;
-            border: none;
-            background-color: transparent;
-            color: #ffffff;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .language-button.active {
-            border-bottom: 2px solid #1abc9c;
-        }
-
-        .language-button:hover {
-            color: #1abc9c;
-        }
-		</style>
+    <link rel="stylesheet" href="../css/StylesChara.css">
 </head>
 <body>
+<!-- Navbar con logo responsive y botones de idioma -->
 <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand text-white pc-logo" href="#">Eminence in Shadow: Master of Garden</a>
-            <a class="navbar-brand text-white mobile-logo" href="#">TES: Master of Garden</a>
-            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="../index.html">
-                            <img class="me-2" height="24" src="../img/UI/Btn_L_01_Off.png" width="24" alt="Inicio"/>
-                            Inicio
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="../Characters.html">
-                            <img class="me-2" height="24" src="../img/UI/Btn_L_02_Off.png" width="24" alt="Characters"/>Characters
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="../banners.html">
-                            <img class="me-2" height="24" src="../img/UI/Btn_L_06_Off.png" width="24" alt="Banners"/>Banners
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center" href="../Events.html">
-                            <img class="me-2" height="24" src="../img/UI/Btn_L_06_Off.png" width="24" alt="Events"/>Events
-                        </a>
-                    </li>
-                    <!-- Botón de Night Mode -->
-                    <li class="nav-item ms-3">
-                        <button id="toggle-dark-mode" class="btn-custom">
-                            🌙 Night Mode
-                        </button>
-                    </li>
-                    <!-- Botones de idioma -->
-                    <li class="nav-item ms-3">
-                        <button class="language-button active" id="english-button" data-language="en">English</button>
-                        <button class="language-button" id="japanese-button" data-language="jp">Japanese</button>
-                    </li>
-                </ul>
-            </div>
+    <div class="container">
+        <a class="navbar-brand text-white pc-logo" href="#">Eminence in Shadow: Master of Garden</a>
+        <a class="navbar-brand text-white mobile-logo" href="#">TES: Master of Garden</a>
+        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="../index.html">
+                        <img class="me-2" height="24" src="../img/UI/Btn_L_01_Off.png" width="24" alt="Inicio"/>
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="../Characters.html">
+                        <img class="me-2" height="24" src="../img/UI/Btn_L_02_Off.png" width="24" alt="Characters"/>Characters
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="../banners.html">
+                        <img class="me-2" height="24" src="../img/UI/Btn_L_06_Off.png" width="24" alt="Banners"/>Banners
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="../Events.html">
+                        <img class="me-2" height="24" src="../img/UI/Btn_L_06_Off.png" width="24" alt="Events"/>Events
+                    </a>
+                </li>
+                <!-- Botón de Night Mode -->
+                <li class="nav-item ms-3">
+                    <button id="toggle-dark-mode" class="btn-custom">
+                        🌙 Night Mode
+                    </button>
+                </li>
+                <!-- Botones de idioma -->
+                <li class="nav-item ms-3">
+                    <button class="language-button active" id="english-button" data-language="en">English</button>
+                    <button class="language-button" id="japanese-button" data-language="jp">Japanese</button>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 <!-- ID oculto -->
 <h1 id="chID">1015051</h1>
 
@@ -205,7 +78,7 @@
     </div>
     <!-- Slider para cambiar nivel de habilidades -->
     <div class="my-4 text-center">
-            <label for="levelSlider">Skill Level: </label>
+        <label for="levelSlider">Skill Level: </label>
         <input type="range" id="levelSlider" min="1" max="10" value="1">
         <span id="levelValue">1</span>
     </div>
