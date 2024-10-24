@@ -27,8 +27,50 @@
 td.icon-cell {
     width: 75px; !important;
 }
-/* Estilo para que todas las celdas de la tabla tengan el mismo ancho */
-.equal-width th, .equal-width td {
-    width: 1%;
-    white-space: nowrap;
+
+.mobile-twits {
+    display: none
+}
+
+.stretched-link-container {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 9. Responsive Adjustments */
+@media (max-width: 768px) {
+    .image-container {
+        width: 150px; /* Reduce width for smaller screens */
+        height: auto; /* Let the height adjust accordingly */
+        margin-left: 0;
+    }
+
+    .custom-bg {
+        flex-direction: column; /* Stack the text and image vertically on smaller screens */
+    }
+
+    .col-md-8 {
+        order: 1; /* Ensure the text comes before the image on small screens */
+        width: 100%;
+    }
+
+    .col-auto {
+        order: 2;
+        display: flex;
+        justify-content: center; /* Center the image */
+        width: 100%; /* Make sure the image uses the full width available */
+        margin-top: 15px;
+    }
+
+    .imagenesPost {
+        width: 100%; /* Ensure the image fits within the available width */
+        height: auto;
+        object-fit: cover;
+    }
+    .pc-twits {
+        display: none;
+    }
+    .mobile-twits {
+        display: block
+    }
 }

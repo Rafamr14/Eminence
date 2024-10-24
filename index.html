@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -24,8 +24,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link d-flex align-items-center" href="./index.html">
-                            <img class="me-2" height="24" src="./img/UI/Btn_L_01_Off.png" width="24" alt="Inicio"/>
-                            Inicio
+                            <img class="me-2" height="24" src="./img/UI/Btn_L_01_Off.png" width="24" alt="Home"/>
+                            Home
                         </a>
                     </li>
                     <li class="nav-item">
@@ -43,7 +43,6 @@
                             <img class="me-2" height="24" src="./img/UI/Btn_L_06_Off.png" width="24" alt="Events"/>Events
                         </a>
                     </li>
-                    <!-- Botón de Night Mode -->
                     <li class="nav-item ms-3">
                         <button id="toggle-dark-mode" class="btn-custom">
                             🌙 Night Mode
@@ -56,30 +55,27 @@
 </header>
 <div class="container-fluid my-5">
     <div class="row">
-        <!-- Sidebar Izquierdo -->
         <div class="col-lg-3 mb-4">
-            <!-- Server Time Container -->
             <div class="server-time-container">
                 <h4 class="mb-3">Server Time</h4>
-                <p class="mb-1">Fecha y hora de servidor:</p>
-                <p id="server-time" class="fw-bold">Cargando...</p>
-                <p class="mb-1">Tiempo hasta el reset:</p>
-                <p id="reset-countdown" class="fw-bold">Cargando...</p>
+                <p class="mb-1">Server Date and Time:</p>
+                <p id="server-time" class="fw-bold">Loading...</p>
+                <p class="mb-1">Time until reset:</p>
+                <p id="reset-countdown" class="fw-bold">Loading...</p>
             </div>
 
-            <!-- Próximos Eventos -->
-            <div class="news-article mt-4">
-                <h4 id="containerEventosFuturo" class="mb-3">Próximos Eventos</h4>
+            <div class="news-article mt-4 pc-twits">
+                <h4 id="containerEventosFuturo" class="mb-3">Upcoming Events</h4>
                 <div class="d-flex flex-column align-items-center" data-importance="2">
                     <a href="Events/40016.html">
-                        <img class="w-100 grayscale-on-finish" src="img/Eventos/Armaggedon14.png" alt="Evento"/>
+                        <img class="w-100 grayscale-on-finish" src="img/Eventos/Armaggedon14.png" alt="Event"/>
                     </a>
                     <h6 class="mt-2">15/02/2024 - 18/02/2024</h6>
                 </div>
                 <hr class="my-4"/>
                 <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative twitterhide">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <div aria-label="Cambiar idioma" class="btn-group w-100" role="group">
+                        <div aria-label="Change language" class="btn-group w-100" role="group">
                             <button class="btn btn-dark flex-fill" onclick="jptwitter()" type="button">JP</button>
                             <button class="btn btn-dark flex-fill" onclick="engtwitter()" type="button">ENG</button>
                         </div>
@@ -97,54 +93,73 @@
                 </div>
             </div>
         </div>
-        <!-- Contenido Principal -->
         <div class="col-lg-6 mb-4">
-            <!-- Otra Noticia -->
-            <div class="news-article">
-                <h3 class="mb-3">Título de la noticia 2</h3>
-                <p>Contenido de la noticia 2.</p>
-            </div>
-            <!-- Div Específico con Cambios Aplicados -->
-            <div class="custom-bg">
-                <div class="row g-0 flex-md-row h-md-250 position-relative">
-                    <div class="col-md-8 p-4 d-flex flex-column position-static">
-                        <h5 class="mb-1">Rose: Moonlit Path</h5>
-                        <h6 class="mb-2 text-muted">«This is something I've been entrusted with!»</h6>
-                        <div class="mb-2 text-muted">Dic 15</div>
-                        <p class="card-text mb-auto">¡Rose: Moonlit Path ya disponible!</p>
-                        <a class="stretched-link text-decoration-none text-primary" href="#">Ir al post</a>
-                    </div>
-                    <div class="col-auto ms-auto d-none d-lg-block">
-                        <div class="image-container">
-                            <img alt="imagen noticia 1" class="img-fluid imagenesPost" src="img/CO/CO_1015041.png"/>
+            <h1>New Character added</h1>
+            <a href="new-page.html" class="stretched-link-container">
+                <div class="custom-bg">
+                    <div class="row g-0 flex-md-row h-md-250 position-relative">
+                        <div class="col-md-8 p-4 d-flex flex-column position-static">
+                            <h5 class="mb-1">Rose: Moonlit Path</h5>
+                            <h6 class="mb-2 text-muted">«This is something I've been entrusted with!»</h6>
+                            <div class="mb-2 text-muted">Dec 15</div>
+                            <p class="card-text mb-auto">Rose: Moonlit Path now available!</p>
+                        </div>
+                        <div class="col-auto ms-auto d-none d-lg-block">
+                            <div class="image-container">
+                                <img alt="news image 1" class="img-fluid imagenesPost" src="img/CO/CO_1015041.png"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Fin del Div Específico -->
+            </a>
         </div>
-        <!-- Sidebar Derecho -->
         <div class="col-lg-3 mb-4">
             <div class="news-article">
-                <h4 class="mb-3">Evento Activo</h4>
+                <h4 class="mb-3">Active Event</h4>
                 <hr/>
-                <h4 class="mt-4">Banners Activos</h4>
+                <h4 class="mt-4">Active Banners</h4>
                 <div class="d-flex flex-column align-items-center" data-importance="2">
-                    <img class="w-100 mb-2" src="./img/Banners/GB_10000001.png" style="max-width: 100%;" alt="Banner Activo"/>
-                    <h6 class="mb-2">Prueba</h6>
+                    <img class="w-100 mb-2" src="./img/Banners/GB_10000001.png" style="max-width: 100%;" alt="Active Banner"/>
+                    <h6 class="mb-2">Test</h6>
                     <div id="countdown13" class="fw-bold"></div>
+                </div>
+            </div>
+            <div class="news-article mt-4 mobile-twits">
+                <h4 id="containerEventosFuturo" class="mb-3">Upcoming Events</h4>
+                <div class="d-flex flex-column align-items-center" data-importance="2">
+                    <a href="Events/40016.html">
+                        <img class="w-100 grayscale-on-finish" src="img/Eventos/Armaggedon14.png" alt="Event"/>
+                    </a>
+                    <h6 class="mt-2">15/02/2024 - 18/02/2024</h6>
+                </div>
+                <hr class="my-4"/>
+                <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative twitterhide">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <div aria-label="Change language" class="btn-group w-100" role="group">
+                            <button class="btn btn-dark flex-fill" onclick="jptwitter()" type="button">JP</button>
+                            <button class="btn btn-dark flex-fill" onclick="engtwitter()" type="button">ENG</button>
+                        </div>
+                    </div>
+                    <div id="jp">
+                        <a class="twitter-timeline" data-height="600"
+                           href="https://twitter.com/ShadowgardenMoG?ref_src=twsrc%5Etfw">Tweets by ShadowgardenMoG</a>
+                        <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+                    </div>
+                    <div id="eng" style="display: none">
+                        <a class="twitter-timeline" data-height="600"
+                           href="https://twitter.com/emishadow_rpg?ref_src=twsrc%5Etfw">Tweets by emishadow_rpg</a>
+                        <script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeo5sYB1y1KXJH0C5eVjhIRoHc5q1a4DJUkQp1HKmGfN6KU"
         crossorigin="anonymous"></script>
 <script>
-    // Función para crear el contador de tiempo
     function createCountdown(id, startDateUTC, endDateUTC) {
         function updateCountdown() {
             let currentDate = new Date();
@@ -158,7 +173,7 @@
 
             if (difference <= 0) {
                 clearInterval(timer);
-                element.innerHTML = 'El contador ha terminado';
+                element.innerHTML = 'The countdown is over';
                 let image = element.closest('.d-flex').querySelector('img');
                 if (image) {
                     image.classList.add('grayscale');
@@ -170,16 +185,15 @@
             let hours = Math.floor((difference % (24 * 60 * 60)) / (60 * 60));
             let minutes = Math.floor((difference % (60 * 60)) / 60);
 
-            element.innerHTML = `${days} días, ${hours} horas, ${minutes} minutos`;
+            element.innerHTML = `${days} days, ${hours} hours, ${minutes} minutes`;
         }
 
         let timer = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Inicializar inmediatamente
+        updateCountdown();
     }
 
     createCountdown('countdown13', '2024-08-06T04:00:00Z', '2024-08-20T04:00:00Z');
 
-    // Función para obtener el tiempo restante
     function getTimeRemaining(countdownText) {
         let parts = countdownText.split(' ');
         let days = parseInt(parts[0]);
@@ -195,7 +209,6 @@
         };
     }
 
-    // Función para ordenar los eventos por tiempo restante y importancia
     document.addEventListener("DOMContentLoaded", function () {
         let container = document.getElementById('container');
         if (container) {
@@ -226,7 +239,6 @@
         startServerResetCountdown();
     });
 
-    // Función para el contador de reinicio del servidor
     function startServerResetCountdown() {
         function updateServerResetCountdown() {
             let now = new Date();
@@ -243,16 +255,15 @@
             let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-            document.getElementById('reset-countdown').innerHTML = `${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+            document.getElementById('reset-countdown').innerHTML = `${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 
             document.getElementById('server-time').innerHTML = nowUTC.toISOString().split('T')[0] + ' ' + nowUTC.toTimeString().split(' ')[0];
         }
 
         setInterval(updateServerResetCountdown, 1000);
-        updateServerResetCountdown(); // Inicializar inmediatamente
+        updateServerResetCountdown();
     }
 
-    // Funciones para cambiar los feeds de Twitter
     function jptwitter() {
         document.getElementById("eng").style.display = "none";
         document.getElementById("jp").style.display = "block";
@@ -263,11 +274,9 @@
         document.getElementById("jp").style.display = "none";
     }
 
-    // Funcionalidad para el Night Mode
     const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-    // Verificar la preferencia inicial del usuario
     if (localStorage.getItem('dark-mode') === 'enabled') {
         document.body.classList.add('dark-mode');
         toggleDarkModeButton.textContent = '☀️ Day Mode';
@@ -279,7 +288,6 @@
         toggleDarkModeButton.textContent = '☀️ Day Mode';
     }
 
-    // Evento para alternar el Night Mode
     toggleDarkModeButton.addEventListener('click', function () {
         document.body.classList.toggle('dark-mode');
 
