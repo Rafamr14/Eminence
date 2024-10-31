@@ -217,6 +217,57 @@
         {
             "SkillCode": 100707100,
             "LinkId": 0,
+            "PlayingOrder": 1,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 100,
+            "Param": 0,
+            "Shift": 0,
+            "Reference": 0,
+            "ReferenceParam": 0,
+            "HitJudgeType": 1,
+            "TargetConditionCode": 11300000,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 100400030010,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 0,
+            "TimeTypeValue": 0,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 1.1430000066757202,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 100400030010,
+                    "Level": 1,
+                    "Power": 40.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
+            "SkillCode": 100707100,
+            "LinkId": 0,
             "PlayingOrder": 2,
             "TimeLineGroupId": 1,
             "EffectInvokeCondition": 0,
@@ -317,57 +368,6 @@
             ]
         },
         {
-            "SkillCode": 100707100,
-            "LinkId": 0,
-            "PlayingOrder": 1,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 100,
-            "Param": 0,
-            "Shift": 0,
-            "Reference": 0,
-            "ReferenceParam": 0,
-            "HitJudgeType": 1,
-            "TargetConditionCode": 11300000,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 100400030010,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 0,
-            "TimeTypeValue": 0,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 1.1430000066757202,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 100400030010,
-                    "Level": 1,
-                    "Power": 40.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
             "Code": 100707101,
             "Name": "スプラッシュリング",
             "AttitudeType": 0,
@@ -396,6 +396,129 @@
             "ConditionalSkillCode": 0,
             "LinkSkillCode": 0,
             "SkillPowers": []
+        },
+        {
+            "SkillCode": 100707101,
+            "LinkId": 1,
+            "PlayingOrder": 1,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 300,
+            "Param": 0,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 0,
+            "TargetConditionCode": 22210006,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 201000030150,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 0,
+            "TimeTypeValue": 0,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 1.9769999980926514,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 201000030150,
+                    "Level": 1,
+                    "Power": 100.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 2,
+                    "Power": 101.66999816894531,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 3,
+                    "Power": 103.33000183105469,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 4,
+                    "Power": 105.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 5,
+                    "Power": 106.66999816894531,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 6,
+                    "Power": 108.33000183105469,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 7,
+                    "Power": 110.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 8,
+                    "Power": 111.66999816894531,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 9,
+                    "Power": 113.33000183105469,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201000030150,
+                    "Level": 10,
+                    "Power": 115.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
         },
         {
             "SkillCode": 100707101,
@@ -644,129 +767,6 @@
             ]
         },
         {
-            "SkillCode": 100707101,
-            "LinkId": 1,
-            "PlayingOrder": 1,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 300,
-            "Param": 0,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 0,
-            "TargetConditionCode": 22210006,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 201000030150,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 0,
-            "TimeTypeValue": 0,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 1.9769999980926514,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 201000030150,
-                    "Level": 1,
-                    "Power": 100.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 2,
-                    "Power": 101.66999816894531,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 3,
-                    "Power": 103.33000183105469,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 4,
-                    "Power": 105.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 5,
-                    "Power": 106.66999816894531,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 6,
-                    "Power": 108.33000183105469,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 7,
-                    "Power": 110.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 8,
-                    "Power": 111.66999816894531,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 9,
-                    "Power": 113.33000183105469,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201000030150,
-                    "Level": 10,
-                    "Power": 115.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
             "Code": 100707102,
             "Name": "クラウドバースト",
             "AttitudeType": 0,
@@ -795,6 +795,129 @@
             "ConditionalSkillCode": 0,
             "LinkSkillCode": 0,
             "SkillPowers": []
+        },
+        {
+            "SkillCode": 100707102,
+            "LinkId": 0,
+            "PlayingOrder": 1,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 201,
+            "Param": 102,
+            "Shift": 200,
+            "Reference": 2000,
+            "ReferenceParam": 4,
+            "HitJudgeType": 1,
+            "TargetConditionCode": 21200010,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 200200030150,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 200,
+            "TimeTypeValue": 10,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 2.309999942779541,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 200200030150,
+                    "Level": 1,
+                    "Power": 20.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 2,
+                    "Power": 20.329999923706055,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 3,
+                    "Power": 20.670000076293945,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 4,
+                    "Power": 21.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 5,
+                    "Power": 21.329999923706055,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 6,
+                    "Power": 21.670000076293945,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 7,
+                    "Power": 22.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 8,
+                    "Power": 22.329999923706055,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 9,
+                    "Power": 22.670000076293945,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200200030150,
+                    "Level": 10,
+                    "Power": 23.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
         },
         {
             "SkillCode": 100707102,
@@ -922,7 +1045,7 @@
         {
             "SkillCode": 100707102,
             "LinkId": 0,
-            "PlayingOrder": 7,
+            "PlayingOrder": 3,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
@@ -1045,376 +1168,7 @@
         {
             "SkillCode": 100707102,
             "LinkId": 0,
-            "PlayingOrder": 4,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 400,
-            "Param": 200,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 1,
-            "TargetConditionCode": 21200010,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 200010030000,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 200,
-            "TimeTypeValue": 30,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 2.309999942779541,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 200010030000,
-                    "Level": 1,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 2,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 3,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 4,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 5,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 6,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 7,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 8,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 9,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 10,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
-            "SkillCode": 100707102,
-            "LinkId": 0,
-            "PlayingOrder": 9,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 400,
-            "Param": 200,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 1,
-            "TargetConditionCode": 21200010,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 200010030000,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 200,
-            "TimeTypeValue": 30,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 2.309999942779541,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 200010030000,
-                    "Level": 1,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 2,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 3,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 4,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 5,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 6,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 7,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 8,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 9,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 10,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
-            "SkillCode": 100707102,
-            "LinkId": 0,
-            "PlayingOrder": 10,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 400,
-            "Param": 200,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 1,
-            "TargetConditionCode": 21200010,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 200010030000,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 200,
-            "TimeTypeValue": 30,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 2.309999942779541,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 200010030000,
-                    "Level": 1,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 2,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 3,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 4,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 5,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 6,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 7,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 8,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 9,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200010030000,
-                    "Level": 10,
-                    "Power": 1.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
-            "SkillCode": 100707102,
-            "LinkId": 0,
-            "PlayingOrder": 11,
+            "PlayingOrder": 5,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
@@ -1660,7 +1414,7 @@
         {
             "SkillCode": 100707102,
             "LinkId": 0,
-            "PlayingOrder": 3,
+            "PlayingOrder": 11,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
@@ -1783,15 +1537,15 @@
         {
             "SkillCode": 100707102,
             "LinkId": 0,
-            "PlayingOrder": 1,
+            "PlayingOrder": 10,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
-            "Type": 201,
-            "Param": 102,
-            "Shift": 200,
-            "Reference": 2000,
-            "ReferenceParam": 4,
+            "Type": 400,
+            "Param": 200,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
             "HitJudgeType": 1,
             "TargetConditionCode": 21200010,
             "TargetGroup": 0,
@@ -1807,12 +1561,12 @@
             "TargetConditionValue": 0,
             "TargetCondition1": 0,
             "TargetConditionValue1": 0,
-            "SkillPowerCode": 200200030150,
+            "SkillPowerCode": 200010030000,
             "Probability": {
                 "Percent": 100.0
             },
             "TimeType": 200,
-            "TimeTypeValue": 10,
+            "TimeTypeValue": 30,
             "TimeMultiplyReferenceCode": 0,
             "PerformSeconds": 2.309999942779541,
             "InterruptBehaviorCode": 0,
@@ -1822,81 +1576,81 @@
             "SkillStatusEffectVariation": 0,
             "SkillPowers": [
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 1,
-                    "Power": 20.0,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 2,
-                    "Power": 20.329999923706055,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 3,
-                    "Power": 20.670000076293945,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 4,
-                    "Power": 21.0,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 5,
-                    "Power": 21.329999923706055,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 6,
-                    "Power": 21.670000076293945,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 7,
-                    "Power": 22.0,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 8,
-                    "Power": 22.329999923706055,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 9,
-                    "Power": 22.670000076293945,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030150,
+                    "Code": 200010030000,
                     "Level": 10,
-                    "Power": 23.0,
+                    "Power": 1.0,
                     "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
@@ -1906,7 +1660,7 @@
         {
             "SkillCode": 100707102,
             "LinkId": 0,
-            "PlayingOrder": 5,
+            "PlayingOrder": 9,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
@@ -2150,6 +1904,252 @@
             ]
         },
         {
+            "SkillCode": 100707102,
+            "LinkId": 0,
+            "PlayingOrder": 4,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 400,
+            "Param": 200,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 1,
+            "TargetConditionCode": 21200010,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 200010030000,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 200,
+            "TimeTypeValue": 30,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 2.309999942779541,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 200010030000,
+                    "Level": 1,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 2,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 3,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 4,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 5,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 6,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 7,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 8,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 9,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 10,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
+            "SkillCode": 100707102,
+            "LinkId": 0,
+            "PlayingOrder": 7,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 400,
+            "Param": 200,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 1,
+            "TargetConditionCode": 21200010,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 200010030000,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 200,
+            "TimeTypeValue": 30,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 2.309999942779541,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 200010030000,
+                    "Level": 1,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 2,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 3,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 4,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 5,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 6,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 7,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 8,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 9,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200010030000,
+                    "Level": 10,
+                    "Power": 1.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
             "Code": 100707103,
             "Name": "スパイズバケーション",
             "AttitudeType": 0,
@@ -2178,129 +2178,6 @@
             "ConditionalSkillCode": 0,
             "LinkSkillCode": 0,
             "SkillPowers": []
-        },
-        {
-            "SkillCode": 100707103,
-            "LinkId": 0,
-            "PlayingOrder": 1,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 300,
-            "Param": 0,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 0,
-            "TargetConditionCode": 12100000,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 202000030150,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 0,
-            "TimeTypeValue": 0,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 0.0,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 202000030150,
-                    "Level": 1,
-                    "Power": 200.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 2,
-                    "Power": 203.3300018310547,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 3,
-                    "Power": 206.6699981689453,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 4,
-                    "Power": 210.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 5,
-                    "Power": 213.3300018310547,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 6,
-                    "Power": 216.6699981689453,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 7,
-                    "Power": 220.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 8,
-                    "Power": 223.3300018310547,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 9,
-                    "Power": 226.6699981689453,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 10,
-                    "Power": 230.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
         },
         {
             "SkillCode": 100707103,
@@ -2426,6 +2303,129 @@
             ]
         },
         {
+            "SkillCode": 100707103,
+            "LinkId": 0,
+            "PlayingOrder": 1,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 300,
+            "Param": 0,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 0,
+            "TargetConditionCode": 12100000,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 202000030150,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 0,
+            "TimeTypeValue": 0,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 0.0,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 202000030150,
+                    "Level": 1,
+                    "Power": 200.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 2,
+                    "Power": 203.3300018310547,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 3,
+                    "Power": 206.6699981689453,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 4,
+                    "Power": 210.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 5,
+                    "Power": 213.3300018310547,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 6,
+                    "Power": 216.6699981689453,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 7,
+                    "Power": 220.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 8,
+                    "Power": 223.3300018310547,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 9,
+                    "Power": 226.6699981689453,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 10,
+                    "Power": 230.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
             "Code": 100707105,
             "Name": "ストライクコンボ",
             "AttitudeType": 0,
@@ -2529,6 +2529,127 @@
             "ConditionalSkillCode": 0,
             "LinkSkillCode": 0,
             "SkillPowers": []
+        },
+        {
+            "PassiveSkillCode": 100707106,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 200,
+            "Param": 116,
+            "Shift": 201,
+            "Reference": 0,
+            "ReferenceParam": 0,
+            "HitJudgeType": 0,
+            "TargetConditionCode": 12140000,
+            "TargetGroup": 0,
+            "TargetRangeType": 1,
+            "TargetType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 200100030151,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 200,
+            "TimeTypeValue": 60,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 0.0,
+            "PlayingOrder": 1,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 200100030151,
+                    "Level": 1,
+                    "Power": 0.10000000149011612,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 2,
+                    "Power": 0.10170000046491623,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 3,
+                    "Power": 0.10329999774694443,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 4,
+                    "Power": 0.10499999672174454,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 5,
+                    "Power": 0.10670000314712524,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 6,
+                    "Power": 0.10830000042915344,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 7,
+                    "Power": 0.10999999940395355,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 8,
+                    "Power": 0.11169999837875366,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 9,
+                    "Power": 0.11330000311136246,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200100030151,
+                    "Level": 10,
+                    "Power": 0.11500000208616257,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
         },
         {
             "PassiveSkillCode": 100707106,
@@ -2773,127 +2894,6 @@
             ]
         },
         {
-            "PassiveSkillCode": 100707106,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 200,
-            "Param": 116,
-            "Shift": 201,
-            "Reference": 0,
-            "ReferenceParam": 0,
-            "HitJudgeType": 0,
-            "TargetConditionCode": 12140000,
-            "TargetGroup": 0,
-            "TargetRangeType": 1,
-            "TargetType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 200100030151,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 200,
-            "TimeTypeValue": 60,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 0.0,
-            "PlayingOrder": 1,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 200100030151,
-                    "Level": 1,
-                    "Power": 0.10000000149011612,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 2,
-                    "Power": 0.10170000046491623,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 3,
-                    "Power": 0.10329999774694443,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 4,
-                    "Power": 0.10499999672174454,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 5,
-                    "Power": 0.10670000314712524,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 6,
-                    "Power": 0.10830000042915344,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 7,
-                    "Power": 0.10999999940395355,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 8,
-                    "Power": 0.11169999837875366,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 9,
-                    "Power": 0.11330000311136246,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200100030151,
-                    "Level": 10,
-                    "Power": 0.11500000208616257,
-                    "IsPercent": true,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
             "Code": 100707111,
             "Name": "スプラッシュリング＋",
             "AttitudeType": 0,
@@ -2922,129 +2922,6 @@
             "ConditionalSkillCode": 0,
             "LinkSkillCode": 0,
             "SkillPowers": []
-        },
-        {
-            "SkillCode": 100707111,
-            "LinkId": 1,
-            "PlayingOrder": 1,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 300,
-            "Param": 0,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 0,
-            "TargetConditionCode": 22210006,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 201500030150,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 0,
-            "TimeTypeValue": 0,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 1.9769999980926514,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 201500030150,
-                    "Level": 1,
-                    "Power": 150.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 2,
-                    "Power": 152.5,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 3,
-                    "Power": 155.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 4,
-                    "Power": 157.5,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 5,
-                    "Power": 160.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 6,
-                    "Power": 162.5,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 7,
-                    "Power": 165.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 8,
-                    "Power": 167.5,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 9,
-                    "Power": 170.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 201500030150,
-                    "Level": 10,
-                    "Power": 172.5,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
         },
         {
             "SkillCode": 100707111,
@@ -3293,6 +3170,129 @@
             ]
         },
         {
+            "SkillCode": 100707111,
+            "LinkId": 1,
+            "PlayingOrder": 1,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 300,
+            "Param": 0,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 0,
+            "TargetConditionCode": 22210006,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 201500030150,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 0,
+            "TimeTypeValue": 0,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 1.9769999980926514,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 201500030150,
+                    "Level": 1,
+                    "Power": 150.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 2,
+                    "Power": 152.5,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 3,
+                    "Power": 155.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 4,
+                    "Power": 157.5,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 5,
+                    "Power": 160.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 6,
+                    "Power": 162.5,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 7,
+                    "Power": 165.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 8,
+                    "Power": 167.5,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 9,
+                    "Power": 170.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 201500030150,
+                    "Level": 10,
+                    "Power": 172.5,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
             "Code": 100707112,
             "Name": "クラウドバースト＋",
             "AttitudeType": 0,
@@ -3321,6 +3321,129 @@
             "ConditionalSkillCode": 0,
             "LinkSkillCode": 0,
             "SkillPowers": []
+        },
+        {
+            "SkillCode": 100707112,
+            "LinkId": 0,
+            "PlayingOrder": 21,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 400,
+            "Param": 200,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 1,
+            "TargetConditionCode": 21200010,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 200030030000,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 200,
+            "TimeTypeValue": 30,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 2.309999942779541,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 200030030000,
+                    "Level": 1,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 2,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 3,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 4,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 5,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 6,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 7,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 8,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 9,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 10,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
         },
         {
             "SkillCode": 100707112,
@@ -4309,6 +4432,129 @@
         {
             "SkillCode": 100707112,
             "LinkId": 0,
+            "PlayingOrder": 22,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 400,
+            "Param": 200,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 1,
+            "TargetConditionCode": 21200010,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 200030030000,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 200,
+            "TimeTypeValue": 30,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 2.309999942779541,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 200030030000,
+                    "Level": 1,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 2,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 3,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 4,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 5,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 6,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 7,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 8,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 9,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 200030030000,
+                    "Level": 10,
+                    "Power": 3.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
+            "SkillCode": 100707112,
+            "LinkId": 0,
             "PlayingOrder": 10,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
@@ -4432,7 +4678,7 @@
         {
             "SkillCode": 100707112,
             "LinkId": 0,
-            "PlayingOrder": 11,
+            "PlayingOrder": 12,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
@@ -5539,253 +5785,7 @@
         {
             "SkillCode": 100707112,
             "LinkId": 0,
-            "PlayingOrder": 21,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 400,
-            "Param": 200,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 1,
-            "TargetConditionCode": 21200010,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 200030030000,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 200,
-            "TimeTypeValue": 30,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 2.309999942779541,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 200030030000,
-                    "Level": 1,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 2,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 3,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 4,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 5,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 6,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 7,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 8,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 9,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 10,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
-            "SkillCode": 100707112,
-            "LinkId": 0,
-            "PlayingOrder": 22,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 400,
-            "Param": 200,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 1,
-            "TargetConditionCode": 21200010,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 200030030000,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 200,
-            "TimeTypeValue": 30,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 2.309999942779541,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 200030030000,
-                    "Level": 1,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 2,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 3,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 4,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 5,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 6,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 7,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 8,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 9,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 200030030000,
-                    "Level": 10,
-                    "Power": 3.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
-            "SkillCode": 100707112,
-            "LinkId": 0,
-            "PlayingOrder": 12,
+            "PlayingOrder": 11,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
@@ -5938,129 +5938,6 @@
         {
             "SkillCode": 100707113,
             "LinkId": 0,
-            "PlayingOrder": 1,
-            "TimeLineGroupId": 0,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 300,
-            "Param": 0,
-            "Shift": 100,
-            "Reference": 1000,
-            "ReferenceParam": 2,
-            "HitJudgeType": 0,
-            "TargetConditionCode": 12100000,
-            "TargetGroup": 0,
-            "TargetRangeType": 0,
-            "ExcludeMainTarget": 0,
-            "TargetType": 0,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 202000030150,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 0,
-            "TimeTypeValue": 0,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 0.0,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 202000030150,
-                    "Level": 1,
-                    "Power": 200.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 2,
-                    "Power": 203.3300018310547,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 3,
-                    "Power": 206.6699981689453,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 4,
-                    "Power": 210.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 5,
-                    "Power": 213.3300018310547,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 6,
-                    "Power": 216.6699981689453,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 7,
-                    "Power": 220.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 8,
-                    "Power": 223.3300018310547,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 9,
-                    "Power": 226.6699981689453,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                },
-                {
-                    "Code": 202000030150,
-                    "Level": 10,
-                    "Power": 230.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
-            "SkillCode": 100707113,
-            "LinkId": 0,
             "PlayingOrder": 2,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
@@ -6182,6 +6059,129 @@
             ]
         },
         {
+            "SkillCode": 100707113,
+            "LinkId": 0,
+            "PlayingOrder": 1,
+            "TimeLineGroupId": 0,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 300,
+            "Param": 0,
+            "Shift": 100,
+            "Reference": 1000,
+            "ReferenceParam": 2,
+            "HitJudgeType": 0,
+            "TargetConditionCode": 12100000,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetType": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 202000030150,
+            "Probability": {
+                "Percent": 100.0
+            },
+            "TimeType": 0,
+            "TimeTypeValue": 0,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 0.0,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 202000030150,
+                    "Level": 1,
+                    "Power": 200.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 2,
+                    "Power": 203.3300018310547,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 3,
+                    "Power": 206.6699981689453,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 4,
+                    "Power": 210.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 5,
+                    "Power": 213.3300018310547,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 6,
+                    "Power": 216.6699981689453,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 7,
+                    "Power": 220.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 8,
+                    "Power": 223.3300018310547,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 9,
+                    "Power": 226.6699981689453,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 202000030150,
+                    "Level": 10,
+                    "Power": 230.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
             "Code": 100707116,
             "Name": "[浮いて浮かれて海の上]＋",
             "Description": "敵にデバフが付与される度に、青属性の味方全体の行動速度を60秒間<color=red>{0}%</color>アップ(再発動5秒)し、さらに与ダメージを60秒間{1}%アップ(再発動5秒)し、さらにSPを{2}回復(再発動5秒)",
@@ -6209,9 +6209,9 @@
             "PassiveSkillCode": 100707116,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
-            "Type": 301,
-            "Param": 0,
-            "Shift": 101,
+            "Type": 200,
+            "Param": 116,
+            "Shift": 201,
             "Reference": 0,
             "ReferenceParam": 0,
             "HitJudgeType": 0,
@@ -6229,15 +6229,15 @@
             "TargetConditionValue": 0,
             "TargetCondition1": 0,
             "TargetConditionValue1": 0,
-            "SkillPowerCode": 200200030000,
+            "SkillPowerCode": 200200030151,
             "Probability": {
                 "Percent": 100.0
             },
-            "TimeType": 0,
-            "TimeTypeValue": 0,
+            "TimeType": 200,
+            "TimeTypeValue": 60,
             "TimeMultiplyReferenceCode": 0,
             "PerformSeconds": 0.0,
-            "PlayingOrder": 3,
+            "PlayingOrder": 1,
             "InterruptBehaviorCode": 0,
             "EffectTerminateConditionType": 0,
             "EffectTerminateConditionParam": 0,
@@ -6245,82 +6245,82 @@
             "SkillStatusEffectVariation": 0,
             "SkillPowers": [
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 1,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.20000000298023224,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 2,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.20329999923706055,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 3,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.20669999718666077,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 4,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.20999999344348907,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 5,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.21330000460147858,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 6,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.2167000025510788,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 7,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.2199999988079071,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 8,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.2232999950647354,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 9,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.22669999301433563,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030000,
+                    "Code": 200200030151,
                     "Level": 10,
-                    "Power": 20.0,
-                    "IsPercent": false,
+                    "Power": 0.23000000417232513,
+                    "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 }
@@ -6451,9 +6451,9 @@
             "PassiveSkillCode": 100707116,
             "EffectInvokeCondition": 0,
             "EffectInvokeConditionValue": 0,
-            "Type": 200,
-            "Param": 116,
-            "Shift": 201,
+            "Type": 301,
+            "Param": 0,
+            "Shift": 101,
             "Reference": 0,
             "ReferenceParam": 0,
             "HitJudgeType": 0,
@@ -6471,15 +6471,15 @@
             "TargetConditionValue": 0,
             "TargetCondition1": 0,
             "TargetConditionValue1": 0,
-            "SkillPowerCode": 200200030151,
+            "SkillPowerCode": 200200030000,
             "Probability": {
                 "Percent": 100.0
             },
-            "TimeType": 200,
-            "TimeTypeValue": 60,
+            "TimeType": 0,
+            "TimeTypeValue": 0,
             "TimeMultiplyReferenceCode": 0,
             "PerformSeconds": 0.0,
-            "PlayingOrder": 1,
+            "PlayingOrder": 3,
             "InterruptBehaviorCode": 0,
             "EffectTerminateConditionType": 0,
             "EffectTerminateConditionParam": 0,
@@ -6487,82 +6487,82 @@
             "SkillStatusEffectVariation": 0,
             "SkillPowers": [
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 1,
-                    "Power": 0.20000000298023224,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 2,
-                    "Power": 0.20329999923706055,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 3,
-                    "Power": 0.20669999718666077,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 4,
-                    "Power": 0.20999999344348907,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 5,
-                    "Power": 0.21330000460147858,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 6,
-                    "Power": 0.2167000025510788,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 7,
-                    "Power": 0.2199999988079071,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 8,
-                    "Power": 0.2232999950647354,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 9,
-                    "Power": 0.22669999301433563,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 },
                 {
-                    "Code": 200200030151,
+                    "Code": 200200030000,
                     "Level": 10,
-                    "Power": 0.23000000417232513,
-                    "IsPercent": true,
+                    "Power": 20.0,
+                    "IsPercent": false,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
                 }
