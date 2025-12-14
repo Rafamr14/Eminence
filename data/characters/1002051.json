@@ -39,7 +39,10 @@
             "DamageLimitGroupCode": 100,
             "UnlockCharacterVoiceCode": 10021205010,
             "IsPlayableCharacter": true,
-            "CharacterChangeEmotionTriggerCode": 0
+            "CharacterChangeEmotionTriggerCode": 0,
+            "IsCountProfile": true,
+            "AlternateIllustrationItemCode": 0,
+            "IllustratorSignatureText": ""
         },
         {
             "CharacterCode": 1002051,
@@ -51,33 +54,42 @@
             "MagicDefense": 0,
             "SpecialPoint": 0,
             "CriticalChance": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "CriticalMultiplier": {
-                "Percent": 120.0
+                "Percent": 120.0,
+                "DecimalDigitCount": 0
             },
             "CriticalResistance": {
-                "Percent": 50.0
+                "Percent": 50.0,
+                "DecimalDigitCount": 0
             },
             "RecoveryHealth": 0,
             "RecoverySpecialPoint": 0,
             "DrainHealth": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "GainHeal": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "GainSpecialPoint": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "SpecialPointReduction": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "Dodge": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "Accuracy": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "AttackRange": 340.0,
             "HealthPerLevel": 12.5,
@@ -98,33 +110,42 @@
             "MagicDefense": 0,
             "SpecialPoint": 0,
             "CriticalChance": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "CriticalMultiplier": {
-                "Percent": 120.0
+                "Percent": 120.0,
+                "DecimalDigitCount": 0
             },
             "CriticalResistance": {
-                "Percent": 50.0
+                "Percent": 50.0,
+                "DecimalDigitCount": 0
             },
             "RecoveryHealth": 0,
             "RecoverySpecialPoint": 0,
             "DrainHealth": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "GainHeal": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "GainSpecialPoint": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "SpecialPointReduction": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "Dodge": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "Accuracy": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "AttackRange": 340.0,
             "HealthPerLevel": 13.119999885559082,
@@ -145,33 +166,42 @@
             "MagicDefense": 0,
             "SpecialPoint": 0,
             "CriticalChance": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "CriticalMultiplier": {
-                "Percent": 120.0
+                "Percent": 120.0,
+                "DecimalDigitCount": 0
             },
             "CriticalResistance": {
-                "Percent": 50.0
+                "Percent": 50.0,
+                "DecimalDigitCount": 0
             },
             "RecoveryHealth": 0,
             "RecoverySpecialPoint": 0,
             "DrainHealth": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "GainHeal": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "GainSpecialPoint": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "SpecialPointReduction": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "Dodge": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "Accuracy": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "AttackRange": 340.0,
             "HealthPerLevel": 13.75,
@@ -195,7 +225,8 @@
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 2.5,
             "WaitSeconds": 2.5,
@@ -217,6 +248,59 @@
         {
             "SkillCode": 100205100,
             "LinkId": 0,
+            "PlayingOrder": 3,
+            "TimeLineGroupId": 2,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 100,
+            "Param": 0,
+            "Shift": 0,
+            "Reference": 0,
+            "ReferenceParam": 0,
+            "HitJudgeType": 1,
+            "TargetConditionCode": 0,
+            "TargetGroup": 1,
+            "TargetRangeType": 1,
+            "ExcludeMainTarget": 0,
+            "TargetType": 100,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 100400030010,
+            "Probability": {
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
+            },
+            "TimeType": 0,
+            "TimeTypeValue": 0,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 1.5099999904632568,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 100400030010,
+                    "Level": 1,
+                    "Power": 40.0,
+                    "IsPercent": false,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
+            "SkillCode": 100205100,
+            "LinkId": 0,
             "PlayingOrder": 1,
             "TimeLineGroupId": 0,
             "EffectInvokeCondition": 0,
@@ -234,7 +318,8 @@
             "TargetType": 100,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -243,7 +328,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 100300030010,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 0,
             "TimeTypeValue": 0,
@@ -285,7 +371,8 @@
             "TargetType": 100,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -294,7 +381,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 100300030010,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 0,
             "TimeTypeValue": 0,
@@ -317,68 +405,18 @@
             ]
         },
         {
-            "SkillCode": 100205100,
-            "LinkId": 0,
-            "PlayingOrder": 3,
-            "TimeLineGroupId": 2,
-            "EffectInvokeCondition": 0,
-            "EffectInvokeConditionValue": 0,
-            "Type": 100,
-            "Param": 0,
-            "Shift": 0,
-            "Reference": 0,
-            "ReferenceParam": 0,
-            "HitJudgeType": 1,
-            "TargetConditionCode": 0,
-            "TargetGroup": 1,
-            "TargetRangeType": 1,
-            "ExcludeMainTarget": 0,
-            "TargetType": 100,
-            "TargetValue": 0,
-            "TargetRange": {
-                "Percent": 0.0
-            },
-            "TargetParamType": 0,
-            "TargetCondition": 0,
-            "TargetConditionValue": 0,
-            "TargetCondition1": 0,
-            "TargetConditionValue1": 0,
-            "SkillPowerCode": 100400030010,
-            "Probability": {
-                "Percent": 100.0
-            },
-            "TimeType": 0,
-            "TimeTypeValue": 0,
-            "TimeMultiplyReferenceCode": 0,
-            "PerformSeconds": 1.5099999904632568,
-            "InterruptBehaviorCode": 0,
-            "EffectTerminateConditionType": 0,
-            "EffectTerminateConditionParam": 0,
-            "EffectTerminateConditionValue": 0,
-            "SkillStatusEffectVariation": 0,
-            "SkillPowers": [
-                {
-                    "Code": 100400030010,
-                    "Level": 1,
-                    "Power": 40.0,
-                    "IsPercent": false,
-                    "MultiplyReferenceCode": 0,
-                    "DistributionCode": 0
-                }
-            ]
-        },
-        {
             "Code": 100205101,
             "Name": "Pierce of Light",
             "AttitudeType": 0,
-            "Description": "Inflicts <color=red>{0}%</color> DMG on single enemy. Further lowers DEF of that enemy based on target's total \"Mystic Power\" (Stacked) multiplied by <color=red>{2}%</color> for 7s. (Max. 30%)",
-            "ShortDescription": "Inflicts DMG on single enemy, lowers DEF based on target's total \"Mystic Power\"",
+            "Description": "Inflicts <color=red>{0}%</color> DMG on single enemy. Further lowers DEF of that enemy based on target's total <code=900,param=900><color=#3398f1>Mystic Power</color> (Stacked) multiplied by <color=red>{2}%</color> for 7s. (Max. 30%)",
+            "ShortDescription": "Inflicts DMG on single enemy, lowers DEF based on target's total Mystic Power",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 3.0,
             "WaitSeconds": 2.5,
@@ -417,7 +455,8 @@
             "TargetType": 100,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -426,7 +465,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 203000030150,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 0,
             "TimeTypeValue": 0,
@@ -524,14 +564,15 @@
             "Code": 100205102,
             "Name": "Lionheart",
             "AttitudeType": 0,
-            "Description": "Raises own ATK by <color=red>{0}%</color> for 10s. Grants 2x \"Mystic Power\" on single enemy with highest DEF for 25s.",
-            "ShortDescription": "Raises own ATK. Grants \"Mystic Power\" on single enemy",
+            "Description": "Raises own ATK by <color=red>{0}%</color> for 10s. Grants 2x <code=900,param=900><color=#3398f1>Mystic Power</color> on single enemy with highest DEF for 25s.",
+            "ShortDescription": "Raises own ATK. Grants Mystic Power on single enemy",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 3.1670000553131104,
             "WaitSeconds": 2.5,
@@ -570,7 +611,8 @@
             "TargetType": 1,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -579,7 +621,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 200300030150,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 200,
             "TimeTypeValue": 10,
@@ -677,14 +720,15 @@
             "Code": 100205103,
             "Name": "Atomic Grenade",
             "AttitudeType": 0,
-            "Description": "Inflicts <color=red>{0}%</color> DMG on all enemies. Further raises each target's DMG based on its total \"Mystic Power\" (Stacked) multiplied by <color=red>{1}%</color>. (Max. 3000%)",
+            "Description": "Inflicts <color=red>{0}%</color> DMG on all enemies. Further raises each target's DMG based on its total <code=900,param=900><color=#3398f1>Mystic Power</color> (Stacked) multiplied by <color=red>{1}%</color>. (Max. 3000%)",
             "ShortDescription": "Inflicts DMG on all enemies",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 0.0,
             "WaitSeconds": 2.5,
@@ -723,7 +767,8 @@
             "TargetType": 0,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -732,7 +777,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 21000003015005,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 0,
             "TimeTypeValue": 0,
@@ -837,7 +883,8 @@
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 0.0,
             "WaitSeconds": 0.0,
@@ -876,7 +923,8 @@
             "TargetType": 100,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -885,7 +933,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 101000030010,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 0,
             "TimeTypeValue": 0,
@@ -910,8 +959,8 @@
         {
             "Code": 100205106,
             "Name": "Honor Student",
-            "Description": "30s after start of Wave, raises DMG Inflicted for all Blue Elemental allies based on total \"Mystic Power\" (Stacked) on all enemies multiplied by <color=red>{1}%</color> for 30s. (Max. 100%)",
-            "ShortDescription": "30s after start of Wave, raises DMG Inflicted for Blue Elemental allies based on total \"Mystic Power\"",
+            "Description": "30s after start of Wave, raises DMG Inflicted for all Blue Elemental allies based on total <code=900,param=900><color=#3398f1>Mystic Power</color> (Stacked) on all enemies multiplied by <color=red>{1}%</color> for 30s. (Max. 100%)",
+            "ShortDescription": "30s after start of Wave, raises DMG Inflicted for Blue Elemental allies based on total Mystic Power",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
@@ -935,14 +984,15 @@
             "Code": 100205111,
             "Name": "Pierce of Light +",
             "AttitudeType": 0,
-            "Description": "Inflicts <color=red>{0}%</color> DMG on single enemy. Further lowers DEF of that enemy based on target's total \"Mystic Power\" (Stacked) multiplied by <color=red>{2}%</color> for 7s. (Max. 30%)",
-            "ShortDescription": "Inflicts DMG on single enemy, lowers DEF based on target's total \"Mystic Power\"",
+            "Description": "Inflicts <color=red>{0}%</color> DMG on single enemy. Further lowers DEF of that enemy based on target's total <code=900,param=900><color=#3398f1>Mystic Power</color> (Stacked) multiplied by <color=red>{2}%</color> for 7s. (Max. 30%)",
+            "ShortDescription": "Inflicts DMG on single enemy, lowers DEF based on target's total Mystic Power",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 3.0,
             "WaitSeconds": 2.5,
@@ -981,7 +1031,8 @@
             "TargetType": 100,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -990,7 +1041,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 203000030150,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 0,
             "TimeTypeValue": 0,
@@ -1088,14 +1140,15 @@
             "Code": 100205112,
             "Name": "Lionheart +",
             "AttitudeType": 0,
-            "Description": "Raises own ATK by <color=red>{0}%</color> for 10s. Grants 3x \"Mystic Power\" on single enemy with highest DEF for 25s.",
-            "ShortDescription": "Raises own ATK. Grants \"Mystic Power\" on single enemy",
+            "Description": "Raises own ATK by <color=red>{0}%</color> for 10s. Grants 3x <code=900,param=900><color=#3398f1>Mystic Power</color> on single enemy with highest DEF for 25s.",
+            "ShortDescription": "Raises own ATK. Grants Mystic Power on single enemy",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 3.1670000553131104,
             "WaitSeconds": 2.5,
@@ -1134,7 +1187,8 @@
             "TargetType": 1,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -1143,7 +1197,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 200400030150,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 200,
             "TimeTypeValue": 10,
@@ -1241,14 +1296,15 @@
             "Code": 100205113,
             "Name": "Atomic Grenade +",
             "AttitudeType": 0,
-            "Description": "Inflicts <color=red>{0}%</color> DMG on all enemies. Further raises each target's DMG based on its total \"Mystic Power\" (Stacked) multiplied by <color=red>{1}%</color>. (Max. 3000%)",
+            "Description": "Inflicts <color=red>{0}%</color> DMG on all enemies. Further raises each target's DMG based on its total <code=900,param=900><color=#3398f1>Mystic Power</color> (Stacked) multiplied by <color=red>{1}%</color>. (Max. 3000%)",
             "ShortDescription": "Inflicts DMG on all enemies",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
             "SpecialConditionName": "",
             "AttitudeDamageBonus": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "PerformanceSeconds": 0.0,
             "WaitSeconds": 2.5,
@@ -1287,7 +1343,8 @@
             "TargetType": 0,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 0,
             "TargetCondition": 0,
@@ -1296,7 +1353,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 21000003015006,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 0,
             "TimeTypeValue": 0,
@@ -1393,8 +1451,8 @@
         {
             "Code": 100205116,
             "Name": "Honor Student +",
-            "Description": "30s after start of Wave, raises DMG Inflicted for all Blue Elemental allies based on total \"Mystic Power\" (Stacked) on all enemies multiplied by <color=red>{1}%</color> for 30s. (Max. 100%)",
-            "ShortDescription": "30s after start of Wave, raises DMG Inflicted for Blue Elemental allies based on total \"Mystic Power\"",
+            "Description": "30s after start of Wave, raises DMG Inflicted for all Blue Elemental allies based on total <code=900,param=900><color=#3398f1>Mystic Power</color> (Stacked) on all enemies multiplied by <color=red>{1}%</color> for 30s. (Max. 100%)",
+            "ShortDescription": "30s after start of Wave, raises DMG Inflicted for Blue Elemental allies based on total Mystic Power",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
@@ -1417,8 +1475,8 @@
         {
             "Code": 100205120,
             "Name": "Honor Student: Alpha Only",
-            "Description": "At start of Wave, grants 3x \"Mystic Power\" on single enemy with highest DEF for 25s. Further lowers Speed by <color=red>{3}%</color> for 10s.",
-            "ShortDescription": "At start of Wave, grants \"Mystic Power\", lowers Speed on single enemy",
+            "Description": "At start of Wave, grants 3x <code=900,param=900><color=#3398f1>Mystic Power</color> on single enemy with highest DEF for 25s. Further lowers Speed by <color=red>{3}%</color> for 10s.",
+            "ShortDescription": "At start of Wave, grants Mystic Power, lowers Speed on single enemy",
             "ConditionalSkillDescription": "",
             "ConditionalSkillShortDescription": "",
             "NormalConditionName": "",
@@ -1455,7 +1513,8 @@
             "ExcludeMainTarget": 0,
             "TargetValue": 0,
             "TargetRange": {
-                "Percent": 0.0
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
             },
             "TargetParamType": 4,
             "TargetCondition": 0,
@@ -1464,7 +1523,8 @@
             "TargetConditionValue1": 0,
             "SkillPowerCode": 700003001,
             "Probability": {
-                "Percent": 100.0
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
             },
             "TimeType": 200,
             "TimeTypeValue": 10,
@@ -1513,6 +1573,113 @@
                     "Code": 700003001,
                     "Level": 5,
                     "Power": 0.30000001192092896,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                }
+            ]
+        },
+        {
+            "Code": 100205121,
+            "Name": "Honor Student: Alpha Only",
+            "Description": "At start of Wave, grants <code=900,param=907><color=#3398f1>Over Conversion (CRIT Rate)</color> (Max. 50%) on self for 60s. Each time 20x <code=900,param=900><color=#3398f1>Mystic Power</color> is inflicted on single enemy, raises own ATK by <color=red>{1}%</color> for 60s. Further raises CRIT Rate by <color=red>{2}%</color> for 60s. Inflicts 100% DMG on single enemy.",
+            "ShortDescription": "No Translation【翻訳不要】JKアルファ新魔道具",
+            "ConditionalSkillDescription": "",
+            "ConditionalSkillShortDescription": "",
+            "NormalConditionName": "",
+            "SpecialConditionName": "",
+            "SkillIconCode": 2,
+            "InvokeFrom": 0,
+            "InvokeTo": 0,
+            "InvokeCondition": 1,
+            "InvokeConditionValue": 0,
+            "InvokeConditionValue1": 0,
+            "InvokeByAllDamageAction": false,
+            "Reinvoke": false,
+            "ReinvokeCount": 0,
+            "ReinvokeTimeInterval": 0.0,
+            "ForceTargetType": 0,
+            "ConditionalSkillCode": 0,
+            "LinkSkillCode": 100205122,
+            "SkillPowers": []
+        },
+        {
+            "PassiveSkillCode": 100205121,
+            "EffectInvokeCondition": 0,
+            "EffectInvokeConditionValue": 0,
+            "Type": 900,
+            "Param": 907,
+            "Shift": 102,
+            "Reference": 1003,
+            "ReferenceParam": 2,
+            "HitJudgeType": 0,
+            "TargetConditionCode": 12400000,
+            "TargetGroup": 0,
+            "TargetRangeType": 0,
+            "TargetType": 0,
+            "ExcludeMainTarget": 0,
+            "TargetValue": 0,
+            "TargetRange": {
+                "Percent": 0.0,
+                "DecimalDigitCount": 0
+            },
+            "TargetParamType": 0,
+            "TargetCondition": 0,
+            "TargetConditionValue": 0,
+            "TargetCondition1": 0,
+            "TargetConditionValue1": 0,
+            "SkillPowerCode": 700005004,
+            "Probability": {
+                "Percent": 100.0,
+                "DecimalDigitCount": 0
+            },
+            "TimeType": 200,
+            "TimeTypeValue": 60,
+            "TimeMultiplyReferenceCode": 0,
+            "PerformSeconds": 0.0,
+            "PlayingOrder": 1,
+            "InterruptBehaviorCode": 0,
+            "EffectTerminateConditionType": 0,
+            "EffectTerminateConditionParam": 0,
+            "EffectTerminateConditionValue": 0,
+            "SkillStatusEffectVariation": 0,
+            "SkillPowers": [
+                {
+                    "Code": 700005004,
+                    "Level": 1,
+                    "Power": 0.5,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 700005004,
+                    "Level": 2,
+                    "Power": 0.5,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 700005004,
+                    "Level": 3,
+                    "Power": 0.5,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 700005004,
+                    "Level": 4,
+                    "Power": 0.5,
+                    "IsPercent": true,
+                    "MultiplyReferenceCode": 0,
+                    "DistributionCode": 0
+                },
+                {
+                    "Code": 700005004,
+                    "Level": 5,
+                    "Power": 0.5,
                     "IsPercent": true,
                     "MultiplyReferenceCode": 0,
                     "DistributionCode": 0
