@@ -5,113 +5,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheeky Teenager: Delta</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/StylesChara.css">
 </head>
 <body>
-<!-- Navbar con logo responsive y botones de idioma -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand text-white pc-logo" href="#">Eminence in Shadow: Master of Garden</a>
-        <a class="navbar-brand text-white mobile-logo" href="#">TES: Master of Garden</a>
-        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="../index.html">
-                        <img class="me-2" height="24" src="../img/UI/Btn_L_01_Off.png" width="24" alt="Inicio"/>
-                        Inicio
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="../Characters.html">
-                        <img class="me-2" height="24" src="../img/UI/Btn_L_02_Off.png" width="24" alt="Characters"/>Characters
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="../banners.html">
-                        <img class="me-2" height="24" src="../img/UI/Btn_L_06_Off.png" width="24" alt="Banners"/>Banners
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center" href="../Events.html">
-                        <img class="me-2" height="24" src="../img/UI/Btn_L_06_Off.png" width="24" alt="Events"/>Events
-                    </a>
-                </li>
-                <!-- Botón de Night Mode -->
-                <li class="nav-item ms-3">
-                    <button id="toggle-dark-mode" class="btn-custom">
-                        🌙 Night Mode
-                    </button>
-                </li>
-                <!-- Botones de idioma -->
-                <li class="nav-item ms-3">
-                    <button class="language-button active" id="english-button" data-language="en">English</button>
-                    <button class="language-button" id="japanese-button" data-language="jp">Japanese</button>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- ID oculto -->
-<h1 id="chID">1005071</h1>
-
-<div class="container">
-    <!-- Título del personaje -->
-    <h1 id="characterTitle" class="w-100 bg-light">Cheeky Teenager: Delta</h1>
-
-    <!-- Imagen del personaje -->
-    <img class="w-100 imgAuto" src="../img/CH/IL_1005071.png" alt="Imagen del Personaje">
-
-    <!-- Sección de Characters -->
-    <div class="table-responsive">
-        <table class="table table-hover " id="characters-table">
-            <tbody id="characters-body"></tbody>
-        </table>
-    </div>
-    <!-- Slider para cambiar nivel de habilidades -->
-    <div class="my-4 text-center">
-        <label for="levelSlider">Skill Level: </label>
-        <input type="range" id="levelSlider" min="1" max="10" value="1">
-        <span id="levelValue">1</span>
-    </div>
-    <!-- Sección de Skills y Dupes -->
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Skills</h2>
-            <div class="table-responsive">
-                <table class="table table-hover " id="Skills-Table">
-                    <thead>
-                    <tr id="Skills-Header"></tr>
-                    </thead>
-                    <tbody id="Skills-Body"></tbody>
-                </table>
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="nav-brand" href="#">
+                <span class="brand-text pc-logo">Eminence in Shadow: Master of Garden</span>
+                <span class="brand-text mobile-logo">TES: MoG</span>
+            </a>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Characters.html">Characters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../banners.html">Banners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Events.html">Events</a></li>
+                </ul>
+                
+                <div class="nav-controls">
+                    <div class="theme-switch">
+                        <span class="theme-label">Light</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle" checked>
+                            <span class="slider-toggle"></span>
+                        </label>
+                        <span class="theme-label">Dark</span>
+                    </div>
+                    <div class="language-switcher">
+                        <button class="language-button active" id="english-button" data-language="en">EN</button>
+                        <button class="language-button" id="japanese-button" data-language="jp">JP</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <h2>Awaken</h2>
-            <div class="table-responsive">
-                <table class="table table-hover " id="SkillsDupes-Table">
-                    <thead>
-                    <tr id="SkillsDupes-Header"></tr>
-                    </thead>
-                    <tbody id="SkillsDupes-Body"></tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
+    </nav>
 
-<!-- Bootstrap JS (opcional si necesitas funcionalidades JS de Bootstrap) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!-- Tu script principal -->
-<script src="../js/main.js"></script>
+    <!-- ID oculto -->
+    <h1 id="chID">1005071</h1>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Character Profile Section -->
+        <section class="character-profile">
+            <!-- Left: Character Image + Name -->
+            <div class="profile-left">
+                <div class="image-frame">
+                    <img class="character-image imgAuto" id="characterImage" src="../img/CH/IL_1005071.png" alt="Character Image" onclick="openLightbox()">
+                    <div class="image-selector" id="imageSelector" style="display: none;">
+                        <button class="img-btn active" data-img="1">1</button>
+                        <button class="img-btn" data-img="2">2</button>
+                    </div>
+                </div>
+                <div class="info-header">
+                    <h1 id="characterTitle" class="character-name">Cheeky Teenager: Delta</h1>
+                </div>
+            </div>
+            
+            <!-- Right: Stats -->
+            <div class="profile-right">
+                <div class="stats-panel">
+                    <h3 class="panel-title">Base Stats</h3>
+                    <div class="table-wrapper">
+                        <table class="stats-table" id="characters-table">
+                            <tbody id="characters-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-img" id="lightboxImg" src="" alt="Character Full">
+        </div>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <div class="skills-header">
+                <h2 class="section-title">Skills</h2>
+                <div class="skill-level-control">
+                    <span class="control-label">Skill Level:</span>
+                    <input type="range" id="levelSlider" min="1" max="10" value="1" class="skill-slider">
+                    <span id="levelValue" class="level-value">1</span>
+                </div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Active Skills -->
+                <div class="skills-panel">
+                    <h3 class="panel-title">Active Skills</h3>
+                    <div class="table-wrapper">
+                        <table class="skills-table" id="Skills-Table">
+                            <thead>
+                                <tr id="Skills-Header"></tr>
+                            </thead>
+                            <tbody id="Skills-Body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Awaken Skills -->
+                <div class="skills-panel">
+                    <h3 class="panel-title">Awaken Skills</h3>
+                    <div class="table-wrapper">
+                        <table class="skills-table" id="SkillsDupes-Table">
+                            <thead>
+                                <tr id="SkillsDupes-Header"></tr>
+                            </thead>
+                            <tbody id="SkillsDupes-Body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>The Eminence in Shadow: Master of Garden - Fan Database</p>
+        <p class="disclaimer">Not affiliated with Crunchyroll Games</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 40; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeToggle.checked = false;
+        }
+        
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Image Selector - Check for alternate images
+        const characterCode = document.getElementById('chID').textContent.trim();
+        const characterImage = document.getElementById('characterImage');
+        const imageSelector = document.getElementById('imageSelector');
+        const baseImagePath = `../img/CH/IL_${characterCode}`;
+        
+        // Check if alternate image exists
+        function checkAlternateImage() {
+            const img = new Image();
+            img.onload = function() {
+                imageSelector.style.display = 'flex';
+            };
+            img.onerror = function() {
+                imageSelector.style.display = 'none';
+            };
+            img.src = `${baseImagePath}_2.png`;
+        }
+        
+        checkAlternateImage();
+        
+        // Image selector buttons
+        document.querySelectorAll('.img-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.img-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const imgNum = this.dataset.img;
+                if (imgNum === '1') {
+                    characterImage.src = `${baseImagePath}.png`;
+                } else {
+                    characterImage.src = `${baseImagePath}_2.png`;
+                }
+            });
+        });
+        
+        // Lightbox
+        function openLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.src = characterImage.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', createParticles);
+    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

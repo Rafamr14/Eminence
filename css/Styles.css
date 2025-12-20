@@ -1,76 +1,186 @@
-/* Definición del color personalizado */
-.text-rojo { color: #dc2626 !important;}
-.bg-red-600 { background-color: #dc2626 !important;}
-.bg-graybg { background-color: 	#9ca3af !important;}
-.bg-alpha { background-color: #F7DC6F } /* cambiar color de texto a negro*/
-.bg-beta { background-color: #BCE9E6}
-.bg-gamma { background-color: #0d16a1}
-.bg-delta { background-color: #025d0f}
-.bg-epsilon { background-color: #3ee1c3}
-.bg-zeta { background-color: #d25d10}
-.bg-eta { background-color: #700b40}
-.bg-nu { background-color: #954535}
-.bg-alexia { background-color: #b5a6d6 }
-.bg-claire { background-color: #000000 }
-.bg-iris { background-color: #d2042d}
-.bg-rose { background-color: #6104d2}
-.bg-sherry { background-color: #ff69b4}
-.bg-aurora { background-color: #ad0437}
-.bg-beatrix { background-color: #bfb2ba}
-.bg-annerose { background-color: #969be7}
-.bg-lambda { background-color: #dedada}
-.bg-victoria { background-color: #ddb5ef}
-.bg-elisabeth { background-color: #880808}
-.bg-yukime { background-color: #ffffff} /* cambiar texto a negro */
-.bg-vtuber { background-color: #0fee1f}
+/* ========================================
+   UTILITY CLASSES & CHARACTER COLORS
+   ======================================== */
 
+/* === Text Utility === */
+.text-rojo { color: #dc2626 !important; }
+
+/* === Background Utilities === */
+.bg-red-600 { background-color: #dc2626 !important; }
+.bg-graybg { background-color: var(--bg-color) !important; }
+
+/* === Character Colors - Updated for new theme === */
+/* Light backgrounds get dark text, dark backgrounds keep light text */
+
+.bg-alpha {
+    background: linear-gradient(135deg, #F7DC6F 0%, #f5d142 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-beta {
+    background: linear-gradient(135deg, #BCE9E6 0%, #9fe0db 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-gamma {
+    background: linear-gradient(135deg, #1a24b8 0%, #0d16a1 100%) !important;
+}
+
+.bg-delta {
+    background: linear-gradient(135deg, #037012 0%, #025d0f 100%) !important;
+}
+
+.bg-epsilon {
+    background: linear-gradient(135deg, #4ee8cc 0%, #3ee1c3 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-zeta {
+    background: linear-gradient(135deg, #e06a1a 0%, #d25d10 100%) !important;
+}
+
+.bg-eta {
+    background: linear-gradient(135deg, #8a0e50 0%, #700b40 100%) !important;
+}
+
+.bg-nu {
+    background: linear-gradient(135deg, #a34d3d 0%, #954535 100%) !important;
+}
+
+.bg-alexia {
+    background: linear-gradient(135deg, #c4b5e0 0%, #b5a6d6 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-claire {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%) !important;
+}
+
+.bg-iris {
+    background: linear-gradient(135deg, #e0053a 0%, #d2042d 100%) !important;
+}
+
+.bg-rose {
+    background: linear-gradient(135deg, #7205e8 0%, #6104d2 100%) !important;
+}
+
+.bg-sherry {
+    background: linear-gradient(135deg, #ff7dc4 0%, #ff69b4 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-aurora {
+    background: linear-gradient(135deg, #c70540 0%, #ad0437 100%) !important;
+}
+
+.bg-beatrix {
+    background: linear-gradient(135deg, #cfc2c9 0%, #bfb2ba 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-annerose {
+    background: linear-gradient(135deg, #a5aaf0 0%, #969be7 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-lambda {
+    background: linear-gradient(135deg, #eae6e6 0%, #dedada 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-victoria {
+    background: linear-gradient(135deg, #e8c5f5 0%, #ddb5ef 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-elisabeth {
+    background: linear-gradient(135deg, #9a0909 0%, #880808 100%) !important;
+}
+
+.bg-yukime {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+    color: #1a1a2e !important;
+}
+
+.bg-vtuber {
+    background: linear-gradient(135deg, #12ff25 0%, #0fee1f 100%) !important;
+    color: #1a1a2e !important;
+}
+
+/* === Override bg-light for dark mode compatibility === */
+.bg-light {
+    background-color: var(--bg-panel) !important;
+    color: var(--text-color) !important;
+}
+
+/* === Table Cell Width === */
 td.icon-cell {
-    width: 75px; !important;
+    width: 75px !important;
 }
 
+/* === Links === */
+.text-dark {
+    color: var(--text-color) !important;
+}
+
+a.text-dark:hover {
+    color: var(--accent-gold) !important;
+}
+
+/* === Mobile Toggles === */
 .mobile-twits {
-    display: none
+    display: none;
 }
 
+.pc-twits {
+    display: block;
+}
+
+/* === Stretched Link Container === */
 .stretched-link-container {
     text-decoration: none;
     color: inherit;
 }
 
-/* 9. Responsive Adjustments */
+/* === Google Fonts Import === */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap');
+
+/* === Responsive === */
 @media (max-width: 768px) {
     .image-container {
-        width: 150px; /* Reduce width for smaller screens */
-        height: auto; /* Let the height adjust accordingly */
+        width: 150px;
+        height: auto;
         margin-left: 0;
     }
 
     .custom-bg {
-        flex-direction: column; /* Stack the text and image vertically on smaller screens */
+        flex-direction: column;
     }
 
     .col-md-8 {
-        order: 1; /* Ensure the text comes before the image on small screens */
+        order: 1;
         width: 100%;
     }
 
     .col-auto {
         order: 2;
         display: flex;
-        justify-content: center; /* Center the image */
-        width: 100%; /* Make sure the image uses the full width available */
+        justify-content: center;
+        width: 100%;
         margin-top: 15px;
     }
 
     .imagenesPost {
-        width: 100%; /* Ensure the image fits within the available width */
+        width: 100%;
         height: auto;
         object-fit: cover;
     }
+
     .pc-twits {
         display: none;
     }
+
     .mobile-twits {
-        display: block
+        display: block;
     }
 }
