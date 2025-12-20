@@ -421,3 +421,23 @@ header {
         height: 28px;
     }
 }
+
+/* === Footer === */
+.footer {
+    background: var(--navbar-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0.25rem 0;
+}
+
+.footer .disclaimer {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
